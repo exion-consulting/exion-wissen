@@ -5,6 +5,9 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **GitHub-CLI (`gh`) nicht installiert** – Claude kann Repos nicht selbst anlegen → JJ legt das Repo im Browser an (privat, leer, ohne README), Claude verbindet und lädt hoch. Optional `gh` installieren. (exion-wissen, 27.10.)
+- **Keine globale Git-Identität** – erster Commit in neuen Repos brach ab → seit 27.10. global gesetzt (`Jadranko Jelavic`, `jj@exion.consulting`). (exion-wissen, 27.10.)
+- **Umlaute in PowerShell 5.1** – ohne Kodierung werden Umlaute falsch gelesen/geschrieben („ü“ → „Ã¼“) → immer `-Encoding UTF8` beim Lesen, beim Schreiben UTF-8 (ohne BOM: `[IO.File]::WriteAllText(..., New-Object Text.UTF8Encoding $false)`). (alle Projekte, 27.10.)
 - **Kontext-Dateien veralten** – offene Punkte standen noch drin, obwohl sie längst erledigt waren → am Ende jeder Sitzung `context/current-data.md` bzw. die offenen Punkte der Projekt-`CLAUDE.md` aktualisieren. (exion-workspace, 27.10.)
 - **Rechtliche Aussagen in Vorträgen** – Aussagen zum AI Act vor dem Einsatz an der Quelle prüfen und die Quelle in die Sprechernotiz schreiben. (Vortrag 3, 27.10.)
 - **PDF-Schrift verliert Zeichen nach Umlauten** – Fehler in fontkit → Schriften vor dem ersten PDF „aufwärmen“. (justluxx-ERP, 27.10.)
