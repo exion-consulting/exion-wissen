@@ -21,5 +21,5 @@ Ziel: Was in einem Projekt gelernt wurde, soll in allen künftigen Projekten ver
 4. **Vorschlag zeigen:** JJ eine kurze Liste zeigen („Diese 4 Punkte trage ich ein: …, in Datei …“) und auf Bestätigung warten.
 5. **Eintragen:** knapp, in einfachem Deutsch, mit Verweis auf die Quelle (Projekt + Datei), damit man das vollständige Beispiel findet. Veraltetes in den Playbooks korrigieren statt nur Neues anzuhängen; Stand-Datum oben aktualisieren.
 6. **Aufräumen:** Wenn `erkenntnisse.md` lang wird (> ~40 Punkte), wiederkehrende Punkte ins passende Playbook verschieben.
-7. **Sichern:** `_wissen\` ist ein eigenes Git-Repo. Nach dem Eintragen dort committen (englische Message, z. B. „Add lessons from <projekt> stage X“) und `git push` ausführen, falls ein Remote eingerichtet ist.
+7. **Sichern:** `_wissen\` ist ein eigenes Git-Repo (Remote `exion-consulting/exion-wissen`, privat). Falls `Projekte\CLAUDE.md` oder diese SKILL.md geändert wurden, zuerst nach `_wissen\_kopien\` kopieren (siehe `_kopien\README.md`). Dann committen (englische Message, z. B. „Add lessons from <projekt> stage X“) und `git push` ausführen, falls ein Remote eingerichtet ist.
 8. **Abschluss:** in 2–3 Zeilen melden, was wo eingetragen wurde. Falls sinnvoll auch `exion-workspace\context\current-data.md` (Stand, offene Punkte) aktualisieren.
