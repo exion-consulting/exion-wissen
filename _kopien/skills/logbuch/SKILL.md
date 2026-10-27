@@ -1,9 +1,9 @@
 ---
-name: erkenntnisse
-description: Wiederverwendbares Wissen aus der aktuellen Sitzung bzw. dem aktuellen Projekt in die zentrale Wissensablage C:\Users\SIWAIT\Projekte\_wissen\ übernehmen. Verwenden, wenn JJ /erkenntnisse aufruft, eine Etappe oder ein Projekt abschließt oder sagt „merk dir das für alle Projekte“.
+name: logbuch
+description: Wiederverwendbares Wissen aus der aktuellen Sitzung bzw. dem aktuellen Projekt in die zentrale Wissensablage C:\Users\SIWAIT\Projekte\_wissen\ übernehmen. Verwenden, wenn JJ /logbuch aufruft (Logbuch-Eintrag), eine Etappe oder ein Projekt abschließt oder sagt „merk dir das für alle Projekte“.
 ---
 
-# Erkenntnisse in die Wissensablage übernehmen
+# Logbuch – Erkenntnisse in die Wissensablage übernehmen
 
 Ziel: Was in einem Projekt gelernt wurde, soll in allen künftigen Projekten verfügbar sein – ohne dass alte Projekte neu gelesen werden müssen.
 

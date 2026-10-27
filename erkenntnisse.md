@@ -1,7 +1,7 @@
 # Erkenntnisse und Stolpersteine
 
 Kurz, datiert, neueste oben. Format: **Thema** – was passiert ist → was wir seitdem tun. (Projekt)
-Wird über `/erkenntnisse` gepflegt. Ausführliches gehört in das passende Playbook.
+Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 

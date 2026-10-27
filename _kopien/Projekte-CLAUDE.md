@@ -22,7 +22,7 @@ Nicht alles auf einmal lesen, nur die Datei zum Thema der Aufgabe:
 | `_wissen\datenschutz-recht.md` | personenbezogene Daten, AVV, Formulare, Werbung, AI Act, Rechtstexte |
 | `_wissen\erkenntnisse.md` | vor jedem neuen Projekt kurz überfliegen: Stolpersteine und Lösungen |
 
-**Pflege:** Wenn in einem Projekt etwas Wiederverwendbares gelernt wird (Lösung, Stolperstein, bewährtes Vorgehen), am Ende der Etappe in die passende Datei eintragen – JJ kann dafür `/erkenntnisse` aufrufen.
+**Pflege:** Wenn in einem Projekt etwas Wiederverwendbares gelernt wird (Lösung, Stolperstein, bewährtes Vorgehen), am Ende der Etappe in die passende Datei eintragen – JJ kann dafür `/logbuch` aufrufen.
 
 **Wichtig:** In `_wissen\` steht nur allgemeines Wissen – **nie Kundendaten**, Zugangsdaten, Preise oder Interna eines Kunden. Was nur für ein Projekt gilt, bleibt in dessen eigener `CLAUDE.md` bzw. `docs\`.
 
