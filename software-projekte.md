@@ -21,7 +21,7 @@ Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1d fertig). Vo
 - **Änderungsprotokoll nur anhängbar** (Datenbankregel gegen Ändern/Löschen) – GoBD. Stammdaten nie löschen, nur archivieren.
 - Datenbankänderungen **nur über Migrationen**; bestehende Migrationen nie nachträglich ändern.
 - Excel-Import: Vorschau und Import über dieselben Services in **einer Transaktion** (alles oder nichts); Grenzen für Zeilen und Dateigröße.
-- Dezimalzahlen eindeutig (nur Komma), Geschäftsdatum immer `Europe/Berlin`.
+- Dezimalzahlen eindeutig (nur Komma), Geschäftsdatum immer `Europe/Berlin`. In der Oberfläche nie `toISOString()` für Datumsanzeige (liefert UTC, nachts steht der Vortag da), sondern `Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin" })`.
 - **Schnittstelle: alle Rechte vor dem Speichern prüfen** – auch die, die erst für die Antwort gebraucht werden (z. B. „Lieferschein ansehen“). Sonst wird gespeichert und trotzdem 403 gemeldet; ein neuer Versuch (z. B. aus n8n) scheitert dann verwirrend mit „schon vorhanden“. Beispiel: `justluxx-ERP/src/modules/api/resources.ts` (Sendungsnummern).
 - **Doppelte Berechnung auf jedem Weg sperren** – kann derselbe Betrag über mehrere Wege auf eine Rechnung kommen (Versand über Auftrag *und* Lieferschein), reicht die Sperre auf einem Weg nicht. Jeden Weg einzeln absichern und je Weg einen Test schreiben. Beispiel: `justluxx-ERP/src/modules/sales/shippingLines.ts`.
 - **Doppeltes Tippen absichern** (Tablet, langsames Netz): Server sperrt den Datensatz (`SELECT … FOR UPDATE`), prüft in derselben Transaktion „schon erledigt?“ und löscht eine bereits gespeicherte Datei, wenn die Transaktion abbricht. Oberfläche sperrt den Knopf während des Sendens. Kommt nach Verbindungsabbruch „bereits erledigt“ zurück, als Erfolg werten. Test: zwei Aufrufe gleichzeitig → genau ein Ergebnis, eine Datei, ein Webhook. Beispiel: `justluxx-ERP/src/modules/shipping/handover.ts`.
@@ -34,6 +34,7 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 ## Technik-Stolpersteine (Next.js / Node)
 
 - **Next.js ändert sich schnell:** vor dem Coden die mitgelieferte Doku in `node_modules/next/dist/docs/` lesen (steht in `AGENTS.md`).
+- **Windows-Zeilenenden:** in jedem neuen Projekt sofort `.gitattributes` mit `*.sql text eol=lf` – sonst schreibt Git (`core.autocrlf`) Migrationen mit CRLF um und Startdaten landen mit `` in der Datenbank.
 - **Datenbankverbindung auf `globalThis`** halten – sonst lädt Next.js mehrere Instanzen (veraltete Sitzungen).
 - **PGlite** nur für Entwicklung/Tests; nur ein Prozess pro Datei (App und Worker gleichzeitig → PostgreSQL nötig).
 - **PDF mit `@react-pdf/renderer`:** statische TTF-Schriften verwenden (nicht die variable Google-Schrift); Schriften vor dem ersten PDF „aufwärmen“ (Fehler in fontkit lässt nach Umlauten Zeichen verschwinden); kein `lineHeight` auf Seitenebene (sonst fehlt „Seite x von y“); Logos nur PNG/JPEG.
