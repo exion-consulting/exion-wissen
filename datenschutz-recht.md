@@ -1,6 +1,6 @@
 # Playbook: Datenschutz und Recht (Praxis-Checkliste)
 
-Stand: 27.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
+Stand: 28.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
 **Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
 
@@ -41,6 +41,12 @@ Stand: 27.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 ## Chatbots / Voice Agents für Kunden (EXION als Anbieter)
 
 - Hinweis „Sie sprechen mit einer KI“ (Art. 50), AVV je Baustein (Telefonie, KI-Modell, Speicherung), **Einwilligung vor Aufzeichnung** von Gesprächen.
+
+## Beschäftigtendaten in Software (Vorgehen, keine geprüfte Rechtsaussage)
+
+- Auswertungen je Mitarbeiter (Umsatz je Vertriebler, Ziele, Abschlussquoten) sind Leistungsdaten über Beschäftigte. Bewährt: nur die Leitung sieht sie (eigenes Recht), jeder sieht seine eigenen Werte; im Abschnitt „Datenschutz & AI Act“ der Spezifikation nennen und Mitarbeitende informieren.
+- Gibt es einen Betriebsrat, ihn früh einbeziehen – Systeme, die Leistung auswerten können, sind dort typischerweise Thema.
+- Rechtsgrundlage und Mitbestimmung vom Datenschutzbeauftragten bzw. Fachanwalt bestätigen lassen; Stand vor Verwendung prüfen. Beispiel: `justluxx-ERP/docs/technik/entscheidungen-etappe-1d.md` (R11, Abschnitt Datenschutz). (justluxx-ERP, 28.10.2026)
 
 ## GoBD (bei Software mit Belegen/Rechnungen)
 

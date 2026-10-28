@@ -1,6 +1,6 @@
 # Playbook: Softwareprojekte (Webanwendungen, interne Tools, ERP)
 
-Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1c fertig). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
+Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1d fertig). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
 
 > **Vorschläge, keine festen Vorgaben:** Die Abläufe hier haben sich bewährt, müssen aber nicht bei jedem Kunden so laufen. Jeder Kunde hat eigene Vorstellungen. Was der Kunde will, geht vor; dieses Playbook ist der Ausgangspunkt für das Gespräch. Abweichungen im Entscheidungsprotokoll des Projekts festhalten.
 > **Ausnahme:** Gesetzliche Pflichten und Sicherheit (GoBD, Datenschutz, E-Rechnung, Rechteprüfung, Datensicherung) sind nicht verhandelbar. Wünscht der Kunde hier etwas anderes, Risiko erklären und schriftlich festhalten.
@@ -17,6 +17,7 @@ Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1c fertig). Vo
 
 - **Fachlogik nur in Services** (`src/modules/<modul>/service.ts`). Seiten, API, Import rufen nur Services auf → überall dieselben Regeln.
 - **Rechte immer serverseitig prüfen** (`assertCan`); Ausblenden in der Oberfläche ist nie der einzige Schutz. Bei geschützten Feldern prüfen, dass sie über **keinen Nebenweg** durchsickern (Suche, Export, API, Historie).
+- **Fachregeln im Service, nicht nur in der Oberfläche** – was nur die Oberfläche verhindert, geht über Schnittstelle oder direkten Aufruf trotzdem. Beispiel: „Angebot verloren“ ließ sich ohne Verlustgrund setzen, n8n bekam keine Meldung. Jede Regel im Service prüfen und testen; die Oberfläche blendet nur zusätzlich aus. Beispiel: `justluxx-ERP/src/modules/sales/quotes.ts` (`setQuoteOutcome`).
 - **Änderungsprotokoll nur anhängbar** (Datenbankregel gegen Ändern/Löschen) – GoBD. Stammdaten nie löschen, nur archivieren.
 - Datenbankänderungen **nur über Migrationen**; bestehende Migrationen nie nachträglich ändern.
 - Excel-Import: Vorschau und Import über dieselben Services in **einer Transaktion** (alles oder nichts); Grenzen für Zeilen und Dateigröße.
@@ -43,6 +44,7 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
   - EU-Lieferung (K) braucht ein Lieferdatum, auch bei Anzahlungen und deren Gutschriften (BR-IC-11).
   - Positionsname nie leer (BR-25).
 - **ZUGFeRD-PDF (PDF/A-3):** echtes sRGB-Profil (`registry.color.org/rgb-registry/profiles/sRGB2014.icc`), XMP mit Factur-X-Erweiterungsschema, Info-Dictionary passend zum XMP, `PDFDocument.load(..., { updateMetadata: false })` – sonst überschreibt pdf-lib Producer/Datum. Zeichen, die die Schrift nicht hat (Emojis), vor dem Rendern ersetzen (sonst `.notdef` → PDF/A ungültig). CMYK-JPEG-Logos ablehnen (RGB-OutputIntent). Prüfdienst (KoSIT + veraPDF) als eigener Docker-Dienst, Zeitlimit + Größenlimit für Antworten. Beispiel: `justluxx-ERP/src/modules/sales/einvoice/`.
+- **Dateien einzeln hochladen:** Next.js begrenzt die Größe einer Server-Action (`serverActions.bodySizeLimit`). Mehrere Handyfotos zusammen mit dem Formular sprengen das, dann scheitert das ganze Formular. Erst den Datensatz anlegen, dann jede Datei in einer eigenen Anfrage (Fortschritt je Datei, „erneut senden“, Größenprüfung je Datei). Beispiel: `justluxx-ERP/src/ui/complaints/ComplaintDialog.tsx`.
 - `LIKE`-Suchen: Platzhalterzeichen (`%`, `_`) im Suchtext maskieren.
 - `npm audit`: nur „high/critical“ zwingend beheben; bewusst akzeptierte Meldungen im Betriebsdokument begründen.
 
@@ -64,7 +66,8 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 - **Abläufe auch in anderer Reihenfolge testen** – z. B. Vorkasse: Rechnung vor der Übergabe ändert den Status, danach war die Übergabe gesperrt. Statusprüfungen lieber „nicht storniert“ statt „offen“ formulieren, wo es fachlich passt.
 - Testgetrieben arbeiten: erst Test, dann Code – besonders bei Rechnen, Rechten, Steuern.
 - **Arbeit mit Hilfsagenten (Umsetzer + Prüfer je Aufgabe):** Umsetzer lassen oft den Schritt „Test zuerst rot sehen“ aus. Die Prüfung muss deshalb ausdrücklich fragen, ob die Tests ohne den neuen Code wirklich fehlschlagen würden. Am Ende immer eine Gesamtprüfung des ganzen Arbeitszweigs mit dem stärksten Modell.
-- **Gesamtprüfung ist Pflicht (Regel):** Sie fand in zwei Etappen hintereinander Fehler, die alle Einzelprüfungen übersehen hatten (1b: falscher „versendet“-Eintrag in unveränderbarer Tabelle; 1c: zwei Lücken bei der Übergabe). Sie soll Abläufe von Anfang bis Ende verfolgen und auch Menüpfade und Feldnamen im Handbuch mit dem Programm abgleichen.
+- **Browser-Tests mit Zwei-Faktor (TOTP):** Der Schutz gegen wiederverwendete Codes lehnt denselben Code innerhalb von 30 Sekunden ab. Melden sich zwei Tests kurz nacheinander mit demselben Konto an, scheitert der zweite – aber nur im Gesamtlauf, einzeln ist er grün. Deshalb je Test ein eigenes Test-Konto; den Schutz nicht für Tests abschalten.
+- **Gesamtprüfung ist Pflicht (Regel):** Sie fand in zwei Etappen hintereinander Fehler, die alle Einzelprüfungen übersehen hatten (1b: falscher „versendet“-Eintrag in unveränderbarer Tabelle; 1c: zwei Lücken bei der Übergabe; 1d: drei Lücken, u. a. Verkaufschancen ohne Zuständigen, die bei niemandem ankamen). Sie soll Abläufe von Anfang bis Ende verfolgen und auch Menüpfade und Feldnamen im Handbuch mit dem Programm abgleichen.
 
 ## Betrieb (vor dem Echtbetrieb)
 
