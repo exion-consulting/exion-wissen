@@ -5,8 +5,9 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Datum in der Oberfläche einen Tag verschoben** – `toISOString()` liefert Weltzeit (UTC), nachts stand der Vortag da → Datum immer mit `Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin" })` formatieren. (justluxx-ERP, 28.10.)
 - **Windows-Zeilenenden verändern Datenbankdateien** – nach einem Wechsel des Arbeitszweigs schrieb Git (`core.autocrlf=true`) eine SQL-Migration mit Startdaten (E-Mail-Vorlagen) mit CRLF um → Vorlagen mit `\r` in der Datenbank, Test rot → in jedem neuen Projekt sofort `.gitattributes` mit `*.sql text eol=lf`. (justluxx-ERP, 28.10.)
-- **Gesamtprüfung am Ende nie weglassen** – alle 14 Einzelprüfungen waren grün, erst die Gesamtprüfung fand: „versendet“ wurde eingetragen, obwohl nur die eigene BCC-Kopie ankam (Eintrag in einer unveränderbaren Tabelle) → Gesamtprüfung immer machen; Fehler in nicht änderbaren Daten vor dem Echtbetrieb beheben. (justluxx-ERP, 28.10.)
+- **Gesamtprüfung am Ende nie weglassen** → jetzt feste Regel in `software-projekte.md` (Qualität). (justluxx-ERP, 28.10.)
 - **Seltsame Testabweichung nicht wegdefinieren** – ein Testwert wurde geändert, weil „das Auslesen spinnt“; die unabhängige Untersuchung fand einen echten Fehler in allen PDFs → bei unerklärlichen Abweichungen Ursache klären, Test nicht anpassen. (justluxx-ERP, 27.10.)
 - **Steuer-Sonderfälle zeigen sich erst im E-Rechnungs-Prüfer** – Ware + „nicht steuerbar“ auf einer Rechnung, Anzahlung ins EU-Ausland → früh mit Steuerberater klären und Ersatzregel festlegen. (justluxx-ERP, 27.10.)
 - **GitHub-CLI (`gh`) nicht installiert** – Claude kann Repos nicht selbst anlegen → JJ legt das Repo im Browser an (privat, leer, ohne README), Claude verbindet und lädt hoch. Optional `gh` installieren. (exion-wissen, 27.10.)

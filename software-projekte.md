@@ -1,6 +1,6 @@
 # Playbook: Softwareprojekte (Webanwendungen, interne Tools, ERP)
 
-Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1b fertig, 1c läuft). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
+Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1c fertig). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
 
 > **Vorschläge, keine festen Vorgaben:** Die Abläufe hier haben sich bewährt, müssen aber nicht bei jedem Kunden so laufen. Jeder Kunde hat eigene Vorstellungen. Was der Kunde will, geht vor; dieses Playbook ist der Ausgangspunkt für das Gespräch. Abweichungen im Entscheidungsprotokoll des Projekts festhalten.
 > **Ausnahme:** Gesetzliche Pflichten und Sicherheit (GoBD, Datenschutz, E-Rechnung, Rechteprüfung, Datensicherung) sind nicht verhandelbar. Wünscht der Kunde hier etwas anderes, Risiko erklären und schriftlich festhalten.
@@ -23,6 +23,8 @@ Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1b fertig, 1c läuf
 - Dezimalzahlen eindeutig (nur Komma), Geschäftsdatum immer `Europe/Berlin`.
 - **Schnittstelle: alle Rechte vor dem Speichern prüfen** – auch die, die erst für die Antwort gebraucht werden (z. B. „Lieferschein ansehen“). Sonst wird gespeichert und trotzdem 403 gemeldet; ein neuer Versuch (z. B. aus n8n) scheitert dann verwirrend mit „schon vorhanden“. Beispiel: `justluxx-ERP/src/modules/api/resources.ts` (Sendungsnummern).
 - **Doppelte Berechnung auf jedem Weg sperren** – kann derselbe Betrag über mehrere Wege auf eine Rechnung kommen (Versand über Auftrag *und* Lieferschein), reicht die Sperre auf einem Weg nicht. Jeden Weg einzeln absichern und je Weg einen Test schreiben. Beispiel: `justluxx-ERP/src/modules/sales/shippingLines.ts`.
+- **Doppeltes Tippen absichern** (Tablet, langsames Netz): Server sperrt den Datensatz (`SELECT … FOR UPDATE`), prüft in derselben Transaktion „schon erledigt?“ und löscht eine bereits gespeicherte Datei, wenn die Transaktion abbricht. Oberfläche sperrt den Knopf während des Sendens. Kommt nach Verbindungsabbruch „bereits erledigt“ zurück, als Erfolg werten. Test: zwei Aufrufe gleichzeitig → genau ein Ergebnis, eine Datei, ein Webhook. Beispiel: `justluxx-ERP/src/modules/shipping/handover.ts`.
+- **Sperren gelten für alle Folgeschritte** – eine fehlende Freigabe (z. B. Liefersperre) muss auch spätere und „körperliche“ Schritte sperren (Übergabe, Unterschrift), nicht nur das Anlegen. Sonst entstehen z. B. Archiv-PDFs ohne Wasserzeichen. (allgemein bewährt; Beispiel justluxx-ERP, Entscheidung R12 in `docs/technik/entscheidungen-etappe-1c.md`)
 
 ## Sicherheit (Standard für Anwendungen mit Login)
 
@@ -58,8 +60,11 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 
 - `npm run check` (Typen + Lint + Tests) muss vor jedem Commit grün sein; Browser-Tests (Playwright) mit eigener Test-Datenbank.
 - **Test-Datenbank einmal aufbauen und kopieren:** Führt jede Test-DB alle Migrationen neu aus, laufen die Tests bei vielen Kernen in Zeitüberschreitungen. PGlite: einmal migrieren, `dumpDataDir()`, je Test `PGlite.create({ loadDataDir })` (ca. 6× schneller). Timeouts nicht einfach hochsetzen.
+- **Zu viele Test-Durchläufe gleichzeitig:** Auch mit kopierter Test-DB brachen die Tests bei ~23 gleichzeitigen Durchläufen (ein Durchlauf je Kern) ab. Lösung: feste Obergrenze in der Test-Einstellung (`maxWorkers: 3` in `vitest.config`), dann ist `npm run check` ohne Zusatzparameter stabil. Beispiel: `justluxx-ERP/vitest.config.mts`.
+- **Abläufe auch in anderer Reihenfolge testen** – z. B. Vorkasse: Rechnung vor der Übergabe ändert den Status, danach war die Übergabe gesperrt. Statusprüfungen lieber „nicht storniert“ statt „offen“ formulieren, wo es fachlich passt.
 - Testgetrieben arbeiten: erst Test, dann Code – besonders bei Rechnen, Rechten, Steuern.
 - **Arbeit mit Hilfsagenten (Umsetzer + Prüfer je Aufgabe):** Umsetzer lassen oft den Schritt „Test zuerst rot sehen“ aus. Die Prüfung muss deshalb ausdrücklich fragen, ob die Tests ohne den neuen Code wirklich fehlschlagen würden. Am Ende immer eine Gesamtprüfung des ganzen Arbeitszweigs mit dem stärksten Modell.
+- **Gesamtprüfung ist Pflicht (Regel):** Sie fand in zwei Etappen hintereinander Fehler, die alle Einzelprüfungen übersehen hatten (1b: falscher „versendet“-Eintrag in unveränderbarer Tabelle; 1c: zwei Lücken bei der Übergabe). Sie soll Abläufe von Anfang bis Ende verfolgen und auch Menüpfade und Feldnamen im Handbuch mit dem Programm abgleichen.
 
 ## Betrieb (vor dem Echtbetrieb)
 
