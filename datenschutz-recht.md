@@ -30,6 +30,13 @@ Stand: 28.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - Keine Tracker, Analytics, eingebetteten Karten/Videos/Kalender ohne Einwilligung → stattdessen einfache Links.
 - Schriften lokal einbinden (Google Fonts von Google-Servern = Abmahnrisiko).
 
+## Social-Media-Auftritt (z. B. LinkedIn-Firmenseite, geschäftlich genutztes Profil)
+
+- **Impressumspflicht** gilt auch für geschäftliche Social-Media-Auftritte. LinkedIn hat kein Impressum-Feld → Link `…/impressum` (und `…/datenschutz`) ans Ende des Info-/Übersichtstexts, nicht entfernen.
+- **Datenschutzerklärung der Website** um einen Abschnitt zum Auftritt ergänzen: Anbieter (LinkedIn Ireland Unlimited Company, Dublin), nur zusammengefasste Statistiken (Page Insights), **gemeinsame Verantwortung nach Art. 26 DSGVO** mit Link auf LinkedIns „Page Insights Joint Controller Addendum“ (legal.linkedin.com/pages-joint-controller-addendum), Rechtsgrundlage Art. 6 Abs. 1 lit. f, Hinweis auf mögliche USA-Übermittlung + Link auf LinkedIns Datenschutzrichtlinie, Klarstellung „keine LinkedIn-Plugins/-Tracking auf der Website“. Vorlage: `exion-website/src/data/datenschutz.html` Abschnitt 6 (eigene Ergänzung, mit e-recht24-Modul „Social Media“ gegenprüfen).
+- Website nur **verlinken**, keine Plugins oder „Folgen“-Buttons von LinkedIn einbinden (sonst Einwilligung nötig).
+- Keine Personen ohne Zustimmung markieren oder namentlich nennen (Kunden, Teilnehmende).
+
 ## AI Act (EU-KI-Verordnung)
 
 - **Art. 4 – KI-Kompetenz (gilt seit 02.02.2025):** Seit 27.07.2026 neu gefasst durch den „Digital Omnibus“ (VO (EU) 2026/1744): Unternehmen, die KI einsetzen, müssen **Maßnahmen** zur KI-Kompetenz ihrer Leute ergreifen – ein bestimmtes Niveau müssen sie nicht garantieren (vorher: „ausreichendes Maß sicherstellen“). Kein Zertifikat vorgeschrieben; Dokumentation (wer, wann, welche Inhalte) empfohlen. Aufsicht durch nationale Marktaufsichtsbehörden. Grundlage der EXION-Schulung. (Geprüft 28.10.2026 – Sekundärquellen + EUR-Lex-Eintrag; Wortlaut vor Rechtsaussagen auf EUR-Lex prüfen)

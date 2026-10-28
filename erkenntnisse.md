@@ -5,6 +5,9 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Arbeitsordner ohne Sicherung** – der exion-workspace (Schulungen, Folien-Generator, Social-Media-Redaktion) lag nur lokal → jeden Arbeitsordner sofort als privates GitHub-Repo anlegen (JJ legt Repo im Browser an, Claude richtet `.gitignore` ohne `node_modules`/`.env` ein und lädt hoch). (exion-workspace, 28.10.)
+- **LinkedIn einrichten** → eigenes Playbook `social-media-linkedin.md`; Recht → `datenschutz-recht.md` „Social-Media-Auftritt“. (exion-workspace, 28.10.)
+
 - **Gesetzesänderung: auch fertige Office-Dateien prüfen** – nach der Neufassung von Art. 4 AI Act (Juli 2026) waren Skripte und Website schon aktuell, aber Leistungsmappe, Handzettel und Angebot (PPTX/DOCX) enthielten noch alten Wortlaut → Text in Office-Dateien durchsuchen mit `unzip -p datei.pptx | grep -c "Suchwort"`, danach neu erzeugen. Bei Rechtsthemen den Faktencheck ernst nehmen: der Prüf-Agent hatte die Änderung gefunden. (exion-workspace, 28.10.)
 - **Skills und Agents bauen** → eigenes Playbook `ki-agents-skills.md`. (exion-workspace, 28.10.)
 
