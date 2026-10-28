@@ -34,7 +34,7 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 ## Technik-Stolpersteine (Next.js / Node)
 
 - **Next.js ändert sich schnell:** vor dem Coden die mitgelieferte Doku in `node_modules/next/dist/docs/` lesen (steht in `AGENTS.md`).
-- **Windows-Zeilenenden:** in jedem neuen Projekt sofort `.gitattributes` mit `*.sql text eol=lf` – sonst schreibt Git (`core.autocrlf`) Migrationen mit CRLF um und Startdaten landen mit `` in der Datenbank.
+- **Windows-Zeilenenden:** in jedem neuen Projekt sofort `.gitattributes` mit `*.sql text eol=lf` – sonst schreibt Git (`core.autocrlf`) Migrationen mit CRLF um und Startdaten landen mit `\r` in der Datenbank (Beispiel: E-Mail-Vorlagen in justluxx-ERP).
 - **Datenbankverbindung auf `globalThis`** halten – sonst lädt Next.js mehrere Instanzen (veraltete Sitzungen).
 - **PGlite** nur für Entwicklung/Tests; nur ein Prozess pro Datei (App und Worker gleichzeitig → PostgreSQL nötig).
 - **PDF mit `@react-pdf/renderer`:** statische TTF-Schriften verwenden (nicht die variable Google-Schrift); Schriften vor dem ersten PDF „aufwärmen“ (Fehler in fontkit lässt nach Umlauten Zeichen verschwinden); kein `lineHeight` auf Seitenebene (sonst fehlt „Seite x von y“); Logos nur PNG/JPEG.
