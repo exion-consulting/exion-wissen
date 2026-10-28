@@ -2,6 +2,9 @@
 
 Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1b fertig, 1c läuft). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
 
+> **Vorschläge, keine festen Vorgaben:** Die Abläufe hier haben sich bewährt, müssen aber nicht bei jedem Kunden so laufen. Jeder Kunde hat eigene Vorstellungen. Was der Kunde will, geht vor; dieses Playbook ist der Ausgangspunkt für das Gespräch. Abweichungen im Entscheidungsprotokoll des Projekts festhalten.
+> **Ausnahme:** Gesetzliche Pflichten und Sicherheit (GoBD, Datenschutz, E-Rechnung, Rechteprüfung, Datensicherung) sind nicht verhandelbar. Wünscht der Kunde hier etwas anderes, Risiko erklären und schriftlich festhalten.
+
 ## Vorgehen
 
 1. **Gesamtkonzept** (Spezifikation) mit dem Kunden abstimmen und freigeben lassen: Ziele, Module, Rollen/Rechte, Etappen, Schnittstellen, Datenschutz/GoBD.
