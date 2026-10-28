@@ -1,6 +1,6 @@
 # Playbook: Softwareprojekte (Webanwendungen, interne Tools, ERP)
 
-Stand: 27.10.2026 · Quelle: `justluxx-ERP` (Next.js, ~Etappe 1b). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
+Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1b fertig, 1c läuft). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
 
 ## Vorgehen
 
@@ -18,6 +18,8 @@ Stand: 27.10.2026 · Quelle: `justluxx-ERP` (Next.js, ~Etappe 1b). Vollständige
 - Datenbankänderungen **nur über Migrationen**; bestehende Migrationen nie nachträglich ändern.
 - Excel-Import: Vorschau und Import über dieselben Services in **einer Transaktion** (alles oder nichts); Grenzen für Zeilen und Dateigröße.
 - Dezimalzahlen eindeutig (nur Komma), Geschäftsdatum immer `Europe/Berlin`.
+- **Schnittstelle: alle Rechte vor dem Speichern prüfen** – auch die, die erst für die Antwort gebraucht werden (z. B. „Lieferschein ansehen“). Sonst wird gespeichert und trotzdem 403 gemeldet; ein neuer Versuch (z. B. aus n8n) scheitert dann verwirrend mit „schon vorhanden“. Beispiel: `justluxx-ERP/src/modules/api/resources.ts` (Sendungsnummern).
+- **Doppelte Berechnung auf jedem Weg sperren** – kann derselbe Betrag über mehrere Wege auf eine Rechnung kommen (Versand über Auftrag *und* Lieferschein), reicht die Sperre auf einem Weg nicht. Jeden Weg einzeln absichern und je Weg einen Test schreiben. Beispiel: `justluxx-ERP/src/modules/sales/shippingLines.ts`.
 
 ## Sicherheit (Standard für Anwendungen mit Login)
 
@@ -43,6 +45,7 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 
 - Mail **einmal** bauen (`MailComposer`), Zeilenenden auf CRLF vereinheitlichen, **genau diese Bytes** senden und als `.eml` archivieren – sonst weicht das Archiv vom Gesendeten ab (SMTP ergänzt CRLF). Archivieren erst nach Annahme durch den Server; scheitert das Archiv, Mail in einen Notfall-Ordner schreiben.
 - nodemailer wirft **nur, wenn alle** Empfänger abgelehnt werden → `info.rejected` selbst auswerten und anzeigen („Nicht zugestellt an …“).
+- **Zustellung nur an echten Empfängern (An/CC) messen:** Eine angenommene BCC-Kopie ans eigene Postfach zählt nicht – sonst steht „versendet“ im Protokoll, obwohl der Kunde nichts bekam. Alle An/CC abgelehnt → Fehler, kein Eintrag; teilweise abgelehnt → abgelehnte Adressen speichern und anzeigen, nicht als Empfänger führen (auch nicht im Webhook).
 - STARTTLS erzwingen (`requireTLS: true`), Zertifikatsprüfung nie abschalten; Steuerzeichen (CR/LF) in Absendername, Host, Benutzer ablehnen.
 - Postfach-Passwort verschlüsselt speichern, nie an die Oberfläche/ins Protokoll; rohe Fehlertexte des Mailservers nie weitergeben (können den Anmeldedialog enthalten).
 - Fehlerarten unterscheiden: nicht erreichbar (503), Anmeldung (409), Empfänger (422).
@@ -53,6 +56,7 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 - `npm run check` (Typen + Lint + Tests) muss vor jedem Commit grün sein; Browser-Tests (Playwright) mit eigener Test-Datenbank.
 - **Test-Datenbank einmal aufbauen und kopieren:** Führt jede Test-DB alle Migrationen neu aus, laufen die Tests bei vielen Kernen in Zeitüberschreitungen. PGlite: einmal migrieren, `dumpDataDir()`, je Test `PGlite.create({ loadDataDir })` (ca. 6× schneller). Timeouts nicht einfach hochsetzen.
 - Testgetrieben arbeiten: erst Test, dann Code – besonders bei Rechnen, Rechten, Steuern.
+- **Arbeit mit Hilfsagenten (Umsetzer + Prüfer je Aufgabe):** Umsetzer lassen oft den Schritt „Test zuerst rot sehen“ aus. Die Prüfung muss deshalb ausdrücklich fragen, ob die Tests ohne den neuen Code wirklich fehlschlagen würden. Am Ende immer eine Gesamtprüfung des ganzen Arbeitszweigs mit dem stärksten Modell.
 
 ## Betrieb (vor dem Echtbetrieb)
 
