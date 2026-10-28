@@ -2,6 +2,8 @@
 
 Stand: 27.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
+**Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
+
 ## AVV (Auftragsverarbeitungsvertrag)
 
 - Für **jeden** Dienst, der personenbezogene Daten verarbeitet: Hosting (Hetzner, in konsoleH), Google Workspace (CDPA in der Admin-Konsole), n8n (Settings → DPA), KI-Anbieter, Newsletter-Tools.
