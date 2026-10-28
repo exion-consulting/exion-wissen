@@ -5,6 +5,9 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Gesetzesänderung: auch fertige Office-Dateien prüfen** – nach der Neufassung von Art. 4 AI Act (Juli 2026) waren Skripte und Website schon aktuell, aber Leistungsmappe, Handzettel und Angebot (PPTX/DOCX) enthielten noch alten Wortlaut → Text in Office-Dateien durchsuchen mit `unzip -p datei.pptx | grep -c "Suchwort"`, danach neu erzeugen. Bei Rechtsthemen den Faktencheck ernst nehmen: der Prüf-Agent hatte die Änderung gefunden. (exion-workspace, 28.10.)
+- **Skills und Agents bauen** → eigenes Playbook `ki-agents-skills.md`. (exion-workspace, 28.10.)
+
 - **Datum in der Oberfläche einen Tag verschoben** – `toISOString()` liefert Weltzeit (UTC), nachts stand der Vortag da → Datum immer mit `Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin" })` formatieren. (justluxx-ERP, 28.10.)
 - **Windows-Zeilenenden verändern Datenbankdateien** – nach einem Wechsel des Arbeitszweigs schrieb Git (`core.autocrlf=true`) eine SQL-Migration mit Startdaten (E-Mail-Vorlagen) mit CRLF um → Vorlagen mit `\r` in der Datenbank, Test rot → in jedem neuen Projekt sofort `.gitattributes` mit `*.sql text eol=lf`. (justluxx-ERP, 28.10.)
 - **Gesamtprüfung am Ende nie weglassen** → jetzt feste Regel in `software-projekte.md` (Qualität). (justluxx-ERP, 28.10.)

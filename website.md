@@ -1,6 +1,6 @@
 # Playbook: Websites
 
-Stand: 27.10.2026 · Quelle: `exion-website` (www.exion.consulting) – dort liegt der vollständige, funktionierende Code zum Abschauen.
+Stand: 28.10.2026 · Quelle: `exion-website` (www.exion.consulting) – dort liegt der vollständige, funktionierende Code zum Abschauen.
 
 ## Standard-Technik
 
@@ -21,6 +21,10 @@ Stand: 27.10.2026 · Quelle: `exion-website` (www.exion.consulting) – dort lie
 4. Impressum und Datenschutz (siehe `datenschutz-recht.md`).
 5. Hosting, Domain, SSL, Deployment einrichten.
 6. Qualität prüfen: mobil zuerst, Tastatur, Kontrast, Lighthouse > 90 in allen Kategorien.
+
+**Bei jeder Textänderung (auch klein):**
+- Vor dem Veröffentlichen ansehen: `npm run build`, `npx astro preview --port 4321` im Hintergrund, dann Bildschirmfoto ohne Fenster mit Edge: `msedge.exe --headless=new --hide-scrollbars --window-size=1280,1400 --screenshot="<pfad>.png" http://localhost:4321/<seite>` (für Handy-Ansicht `--window-size=390,1400`). Erst nach OK des Kunden committen und pushen.
+- Nach dem Push prüfen, ob es live ist: Seite mit Zufallsparameter abrufen (`curl -sL "https://<domain>/<seite>?v=$RANDOM" | grep -q "<neuer Satz>"`), im Hintergrund alle 10 s, max. ~7 min. Bei exion.consulting war die Änderung nach ca. 30 s live. (`gh` ist nicht installiert, daher kein Blick auf den Action-Lauf.)
 
 ## Deployment-Details (Hetzner + GitHub Actions)
 

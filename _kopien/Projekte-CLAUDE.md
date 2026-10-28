@@ -20,11 +20,22 @@ Nicht alles auf einmal lesen, nur die Datei zum Thema der Aufgabe:
 | `_wissen\n8n-automatisierung.md` | Formulare, Workflows, E-Mail-Versand, Webhooks, Schnittstellen |
 | `_wissen\software-projekte.md` | Webanwendungen, interne Tools, ERP – Planung, Aufbau, Tests, Betrieb |
 | `_wissen\datenschutz-recht.md` | personenbezogene Daten, AVV, Formulare, Werbung, AI Act, Rechtstexte |
+| `_wissen\ki-agents-skills.md` | Skills und Agents für Claude Code bauen, prüfen, testen (z. B. Redaktion, Assistenten für Kunden) |
 | `_wissen\erkenntnisse.md` | vor jedem neuen Projekt kurz überfliegen: Stolpersteine und Lösungen |
 
 **Pflege:** Wenn in einem Projekt etwas Wiederverwendbares gelernt wird (Lösung, Stolperstein, bewährtes Vorgehen), am Ende der Etappe in die passende Datei eintragen – JJ kann dafür `/logbuch` aufrufen.
 
 **Wichtig:** In `_wissen\` steht nur allgemeines Wissen – **nie Kundendaten**, Zugangsdaten, Preise oder Interna eines Kunden. Was nur für ein Projekt gilt, bleibt in dessen eigener `CLAUDE.md` bzw. `docs\`.
+
+## Pflicht in jedem Projekt: DSGVO- und EU-AI-Act-konform bauen
+
+Gilt für **alle** Projekte – eigene (EXION, justluxx) und Kundenprojekte, Software, Websites, n8n-Workflows, Skills/Agents, Inhalte. Rechtskonformität wird von Anfang an mitgeplant, nicht nachträglich geprüft.
+
+1. **In jedem Konzept/jeder Spezifikation** einen Abschnitt „Datenschutz & AI Act“ mit den Antworten auf die Punkte 2 und 3.
+2. **DSGVO:** Welche personenbezogenen Daten, wozu, auf welcher Rechtsgrundlage? So wenig Daten wie möglich, sichere Voreinstellungen. Jeder Dienst mit personenbezogenen Daten: EU-Hosting bevorzugt, AVV abgeschlossen, in der Datenschutzerklärung genannt. Löschfristen und Zugriffsrechte festlegen. Einwilligung, wo nötig (z. B. Werbung, Aufzeichnung, externe Inhalte).
+3. **EU AI Act:** Ist KI beteiligt? Dann Risikostufe klären (Verbote Art. 5, Hochrisiko Anhang III – bei KMU meiden), Transparenz nach Art. 50 (Chatbots/Voice Agents als KI erkennbar, KI-Inhalte wo nötig kennzeichnen), menschliche Kontrolle bei Entscheidungen über Personen, KI-Kompetenz nach Art. 4 beim Betreiber mitdenken.
+4. **Rechtsstand prüfen, bevor er verwendet wird:** `_wissen\datenschutz-recht.md` lesen und bei Fristen/Gesetzesänderungen den aktuellen Stand im Netz prüfen, Prüfdatum vermerken. Gesetze ändern sich (z. B. Art. 4 neu gefasst durch VO (EU) 2026/1744, Juli 2026).
+5. **Keine Rechtsberatung:** Bei Unsicherheit JJ deutlich darauf hinweisen und Fachanwalt/Datenschutzbeauftragten empfehlen – nie raten und nie „rechtssicher“ versprechen.
 
 ## Gemeinsame Regeln für Kundenprojekte
 
