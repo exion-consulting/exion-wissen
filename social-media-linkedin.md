@@ -10,6 +10,7 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 - **Anrede:** persönliches Profil du, Firmenseite Sie/Wir (wie die Website).
 - **Praxis vor Zertifikaten:** Zertifikate nur dezent (Abschnitt „Bescheinigungen“, Website „Über uns“, bei Schulungen „Wer schult?“), nie in Überschrift oder Start-Beitrag; Kurspreise nie öffentlich.
 - **Texte:** deutsche Wörter statt Marketing-Englisch („Anwendungsbeispiel“ statt „Use Case“); konkrete Zahl statt Eigenlob („seit 15 Jahren“ statt „erfolgreich“); Werbeaussagen mit „bis zu“.
+- **Eigenes Erlebnis früh erfragen:** Ratgeber-Posts ohne eigenes Erlebnis bleiben bei der Anziehungskraft hängen (Note 3, auch nach 2 Überarbeitungsrunden). Deshalb die Frage „Hast du das selbst erlebt / bei dir schon gemacht?“ schon bei der Themenbestätigung stellen, nicht erst nach der Prüfung. **Marken trennen:** Ein Post der Marke A bekommt keinen Bezug zu Marke B, nur damit ein Erlebnis drin ist (JJ: „Montag ist doch EXION-Thema“) – Ausnahme, wenn die zweite Marke selbst das Thema ist (z. B. Unternehmer-Tagebuch). (exion-workspace, KW45, 29.10.2026)
 
 ## Einrichtung – Feldnamen und Stolpersteine
 

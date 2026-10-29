@@ -5,6 +5,8 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Amtliche Quelle nicht erreichbar** – BMF-Seiten zur E-Rechnung lieferten den ganzen Tag Fehler 503 → Ersatz über seriöse Zweitquellen (IHK, PwC, Fachverband, Gesetzestext auf gesetze-im-internet.de) und im Post/Protokoll vermerken „Original vor Freigabe gegenlesen“. (exion-workspace, Social Media KW45, 29.10.)
+- **Kein Python in Git Bash auf JJs PC** – `python` startet nur den Microsoft-Store-Hinweis → Dateien mit dem Edit-Werkzeug oder `sed` bearbeiten, keine Python-Einzeiler einplanen. (alle Projekte, 29.10.)
 - **Markenfarbe aus den offiziellen Logodateien messen** – das im Projekt liegende Logo war eine Website-Variante (`#96BC3D`), die offiziellen CI-Dateien haben `#9FB80D` → beim Kunden nach Original-Logodateien fragen und die Pixel nachmessen (PowerShell `System.Drawing`, häufigste Farbe), nicht schätzen. (justluxx-ERP, 29.10.)
 - **Aufklappmenü `<details>` im Browser-Test** – Klick auf einen unsichtbaren Hilfstext (`sr-only`) schlägt fehl → `<summary aria-label="…">` und im Test `getByLabel("…")`. (justluxx-ERP, 29.10.)
 - **Klick-Anleitungen für JJ: Reihenfolge-Fallen ausdrücklich nennen** – Server wurde ohne SSH-Schlüssel erstellt (Schlüssel-Eingabe war abgelehnt worden, weil ein abgekürzter Wert mit „…“ kopiert wurde) → musste gelöscht und neu angelegt werden. Seitdem: „Erst X, ohne X nicht weiter“ klar sagen; Werte zum Kopieren nie abkürzen, lieber per `Set-Clipboard` direkt in die Zwischenablage legen (bei `Get-Content | Set-Clipboard` kann ein unsichtbarer Zeilenumbruch mitrutschen → `.Trim()`). (justluxx-ERP, 29.10.)
