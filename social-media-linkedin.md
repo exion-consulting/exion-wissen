@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 28.10.2026 · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skript `exion-workspace\tools\folien-generator\build-linkedin.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 29.10.2026 · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skript `exion-workspace\tools\folien-generator\build-linkedin.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -46,6 +46,10 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 - Größte Hebel bei kleinen Profilen: **Netzwerk ausbauen** (persönliche Anfragen an passende Kontakte, Ziel 500+) und **täglich 3–5 echte Kommentare** bei Posts der Zielgruppe.
 - Erste Stunde nach dem Posten auf Kommentare antworten; Link nicht in den Post, sondern in den ersten Kommentar; werktags 7–9 Uhr.
 - Nicht: gekaufte Follower, Engagement-Gruppen, Massen-Markierungen (auch Datenschutz).
+- **Erst Netzwerk, dann Start-Beitrag:** Bei kleinem oder lange ruhigem Profil (unter ca. 300 Kontakte) 1–2 Wochen vorher vernetzen und kommentieren. Bei Kunden vor dem Redaktionsstart die Kontaktzahl abfragen und die Erwartung entsprechend setzen. Beispiel: Start-Beitrag JJ mit 160 Kontakten → 5 erreichte Mitglieder, 0 Reaktionen (exion-workspace, `social-media\posts\2026-KW44\`, 29.10.2026).
+- **Beitrag retten am ersten Tag:** 10–15 Bekannte persönlich anschreiben (um ihre Meinung bitten, nicht ums Liken), 5 Kommentare bei anderen schreiben. Nicht löschen und neu posten.
+- **Statistik richtig lesen:** Aussagekräftig sind die „erreichten Mitglieder“, nicht die Impressionen. 0 Reaktionen bei unter 20 Erreichten sagen nichts über den Text. Den Takt nicht wegen schwacher Reichweite kürzen: Die Beiträge sind trotzdem nützlich, denn Profilbesucher sehen später einen aktiven Auftritt.
+- **Datenschutz:** Adressbuch oder E-Mail-Postfach nicht in LinkedIn hochladen (Daten Dritter ohne Einwilligung). Kontakte von Hand suchen.
 
 ## Recht
 

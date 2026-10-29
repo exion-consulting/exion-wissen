@@ -5,6 +5,7 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Start-Beitrag ohne Reichweite** – 160 Kontakte, Profil lange ruhig → nur 5 erreichte Mitglieder; Vorgehen siehe `social-media-linkedin.md` → „Reichweite“. (exion-workspace, 29.10.)
 - **Server-Skripte vom Windows-PC** – mit CRLF-Zeilenenden brechen `.sh`-Dateien auf dem Server ab → `.gitattributes` mit `*.sh`, `deploy/** text eol=lf` (wie schon für `*.sql`). (justluxx-ERP, 29.10.)
 - **Probeläufe testen das Ausrollen nicht** – dem Update-Job fehlte `packages: read`, das private Programmpaket wäre am Server „denied“ gewesen; nur die Gesamtprüfung fand es → den Weg auf den echten Server immer gezielt gedanklich durchspielen lassen. (justluxx-ERP, 29.10.)
 - **Frischer Ubuntu-Server: Paketinstallation gesperrt** – in den ersten Minuten hält das automatische Update die apt-Sperre → `apt-get -o DPkg::Lock::Timeout=600`. (justluxx-ERP, 29.10.)
