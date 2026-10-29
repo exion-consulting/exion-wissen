@@ -5,6 +5,8 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Markenfarbe aus den offiziellen Logodateien messen** – das im Projekt liegende Logo war eine Website-Variante (`#96BC3D`), die offiziellen CI-Dateien haben `#9FB80D` → beim Kunden nach Original-Logodateien fragen und die Pixel nachmessen (PowerShell `System.Drawing`, häufigste Farbe), nicht schätzen. (justluxx-ERP, 29.10.)
+- **Aufklappmenü `<details>` im Browser-Test** – Klick auf einen unsichtbaren Hilfstext (`sr-only`) schlägt fehl → `<summary aria-label="…">` und im Test `getByLabel("…")`. (justluxx-ERP, 29.10.)
 - **Klick-Anleitungen für JJ: Reihenfolge-Fallen ausdrücklich nennen** – Server wurde ohne SSH-Schlüssel erstellt (Schlüssel-Eingabe war abgelehnt worden, weil ein abgekürzter Wert mit „…“ kopiert wurde) → musste gelöscht und neu angelegt werden. Seitdem: „Erst X, ohne X nicht weiter“ klar sagen; Werte zum Kopieren nie abkürzen, lieber per `Set-Clipboard` direkt in die Zwischenablage legen (bei `Get-Content | Set-Clipboard` kann ein unsichtbarer Zeilenumbruch mitrutschen → `.Trim()`). (justluxx-ERP, 29.10.)
 - **PowerShell + `ssh "…\"…\"…"`** – verschachtelte Anführungszeichen kommen auf dem Server kaputt an („unexpected EOF“) → solche Befehle nicht als Einzeiler geben: erst `ssh benutzer@server`, dann den Befehl dort einfügen. (justluxx-ERP, 29.10.)
 - **Einrichtungsskript „durchgelaufen“, aber Benutzer fehlte** – der erste Lauf war unbemerkt abgebrochen → Skript mit `2>&1 | tee /root/setup.log | tail -40` starten und auf die Schlusszeile („Fertig“) achten; danach gezielt prüfen (z. B. `id jj`). (justluxx-ERP, 29.10.)
