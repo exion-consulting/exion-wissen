@@ -58,6 +58,15 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 
 ## Kontakte aufbauen – Kontaktanfragen
 
+**Wo man passende Kontakte findet** (bevorzugt Personen, die auf LinkedIn aktiv sind, denn die nehmen eher an und reagieren auf Beiträge):
+1. **Personensuche mit Filtern:** Suchbegriff (z. B. `Geschäftsführer Schreinerei`) → „Personen“ → „Alle Filter“: Kontakte **2. Grades** (gemeinsame Kontakte, höhere Annahme), Standort/Region, Branche. Kombinieren im Suchfeld: `(Geschäftsführer OR Inhaber) AND (Handwerk OR Metallbau)`. OR/AND großschreiben.
+2. **Kommentare unter Themen-Beiträgen** (z. B. „KI Mittelstand“, „Digitalisierung Handwerk“): Wer dort kommentiert, interessiert sich fürs Thema. Selbst mitkommentieren, dann gibt es einen Anlass für die Anfrage.
+3. **Kammern, Verbände, Veranstaltungen:** den Seiten von Handwerkskammer, IHK, Innungen und Wirtschaftsförderung folgen. Wer dort kommentiert oder sich für Veranstaltungen anmeldet, ist meist Unternehmer aus der Region.
+4. **„Personen, die Sie kennen könnten“** (Reiter „Netzwerk“) einmal pro Woche durchgehen. Oft stehen dort frühere Geschäftspartner.
+5. **Profilbesucher** (Statistik): nehmen fast immer an.
+
+Tagesplan in 15 Minuten: 3–5 Kommentare, 5–10 Anfragen (vor allem an Leute, bei denen schon kommentiert wurde), neue Kontakte ohne Werbung begrüßen. Das kostenlose Konto begrenzt die Zahl der Suchen pro Monat, deshalb gute Suchen speichern und nach und nach abarbeiten. Sales Navigator (kostenpflichtig) lohnt erst bei gezielter Kundenansprache in größerer Zahl.
+
 **Wen anschreiben:**
 - Inhaber und Geschäftsführer der Zielgruppe, am besten aus der Region.
 - Leute, die weiterempfehlen können: Steuerberater, IT-Dienstleister, Unternehmensberater, Handwerkskammer, IHK.
