@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 29.10.2026 · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skript `exion-workspace\tools\folien-generator\build-linkedin.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 29.10.2026 (ergänzt KW45-Freigabe) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skript `exion-workspace\tools\folien-generator\build-linkedin.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -11,6 +11,9 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 - **Praxis vor Zertifikaten:** Zertifikate nur dezent (Abschnitt „Bescheinigungen“, Website „Über uns“, bei Schulungen „Wer schult?“), nie in Überschrift oder Start-Beitrag; Kurspreise nie öffentlich.
 - **Texte:** deutsche Wörter statt Marketing-Englisch („Anwendungsbeispiel“ statt „Use Case“); konkrete Zahl statt Eigenlob („seit 15 Jahren“ statt „erfolgreich“); Werbeaussagen mit „bis zu“.
 - **Eigenes Erlebnis früh erfragen:** Ratgeber-Posts ohne eigenes Erlebnis bleiben bei der Anziehungskraft hängen (Note 3, auch nach 2 Überarbeitungsrunden). Deshalb die Frage „Hast du das selbst erlebt / bei dir schon gemacht?“ schon bei der Themenbestätigung stellen, nicht erst nach der Prüfung. **Marken trennen:** Ein Post der Marke A bekommt keinen Bezug zu Marke B, nur damit ein Erlebnis drin ist (JJ: „Montag ist doch EXION-Thema“) – Ausnahme, wenn die zweite Marke selbst das Thema ist (z. B. Unternehmer-Tagebuch). (exion-workspace, KW45, 29.10.2026)
+- **Pflicht-Themen: erst die Pflicht, dann die Entwarnung.** Der Einstieg „Ein KI-Zertifikat schreibt der AI Act nicht vor“ las sich wie „Schulung braucht keiner“. Besser: „Deine Mitarbeiter nutzen ChatGPT? Dann solltest du Art. 4 kennen.“ und danach „Die gute Nachricht: … Die weniger gute: …“. (exion-workspace, KW45-Montag, 29.10.2026)
+- **Ersparnis im Einstieg immer als Rechenbeispiel kennzeichnen.** „8.100 € weniger Stromkosten pro Jahr“ allein klingt wie ein Versprechen, und Werbung darf nicht irreführen. Besser: „… So viel spart unser Rechenbeispiel mit 100 Hallenleuchten.“ Die Annahmen im Post offen nennen. (exion-workspace, KW45-Mittwoch, 29.10.2026)
+- **Eigene Fassungen des Inhabers kürzen, mit seinen Worten.** Selbst geschriebene Fassungen waren 1.900–2.300 Zeichen lang (Ziel 800–1.300, vertretbar bis ca. 1.600) und enthielten Floskeln („spannend“, „vor wenigen Jahren noch undenkbar“, „nicht nur …, sondern auch …“). Streichen: Doppelungen, rhetorische Fragen hintereinander, mehrere Aufrufe am Schluss. Behalten: Fachblick („Weniger Watt allein sind noch keine gute Lichtplanung“), Praxisdetails (Schichtbetrieb, Produktionsunterbrechung) und den eigenen Standpunkt, denn das macht die Posts stark. Fachliche Ungenauigkeiten können auch in der eigenen Fassung stecken, deshalb danach immer die Faktenprüfung. (exion-workspace, KW45, 29.10.2026)
 
 ## Einrichtung – Feldnamen und Stolpersteine
 

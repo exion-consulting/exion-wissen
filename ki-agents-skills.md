@@ -35,5 +35,14 @@ Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent**
 ## Betrieb
 
 - **Berechtigungen** in `.claude\settings.json` des Projekts: nur das Nötige erlauben (z. B. `WebSearch`, `WebFetch`, `Edit(<zielordner>/**)` – `Edit(...)` gilt auch für Write), Zusatzordner über `additionalDirectories`, Zugangsdaten (`.env`) und Datenordner per `deny` sperren. Sonst stoppen parallele Agents an Rückfragen.
-- **Rückfragen an JJ immer als Auswahl** (AskUserQuestion: 2–4 Optionen, Empfehlung zuerst, eigener Vorschlag möglich) – auch in Skills, die für ihn oder Kunden gebaut werden.
+- **Rückfragen an JJ als Auswahl** (AskUserQuestion: 2–4 Optionen, Empfehlung zuerst, eigener Vorschlag möglich) – bei klaren Entscheidungen, auch in Skills, die für ihn oder Kunden gebaut werden. **Ausnahme: Texte und Gestaltung im Gespräch.** Bei der Freigabe von Posts hat JJ Auswahl-Dialoge zu Einstieg und Freigabe abgebrochen und lieber eigene Fassungen geschrieben.
+- **Freigabe-Ablauf, der sich bewährt hat:**
+  1. Den fertigen Text zeigen.
+  2. Ehrlich einschätzen: was stark ist, dazu 2–4 konkrete Änderungen.
+  3. Eine gekürzte Fassung mit den Worten des Menschen vorschlagen.
+  4. Mit einer offenen Frage enden.
+  5. Danach den Faktenprüfer erneut ansetzen. Er hat in einer eigenen Fassung eine rechtliche Ungenauigkeit gefunden.
+  6. Lernregeln per Mehrfachauswahl abfragen.
+
+  Agent-Entwürfe dienen so als Vorlage und Kritik, nicht als Endtext. (exion-workspace, KW45, 29.10.2026)
 - **Datenschutz & AI Act:** Wer veröffentlicht, trägt die redaktionelle Verantwortung → menschliche Freigabe als Pflichtschritt einbauen; keine Daten Dritter ohne Zustimmung.
