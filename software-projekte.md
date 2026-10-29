@@ -1,6 +1,6 @@
 # Playbook: Softwareprojekte (Webanwendungen, interne Tools, ERP)
 
-Stand: 28.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1d fertig). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
+Stand: 29.10.2026 · Quelle: `justluxx-ERP` (Next.js, Etappe 1a–1d fertig, Testsystem auf Hetzner gebaut). Vollständige Beispiele für Spezifikation, Plan, Entscheidungen und Handbuch liegen dort unter `docs/`.
 
 > **Vorschläge, keine festen Vorgaben:** Die Abläufe hier haben sich bewährt, müssen aber nicht bei jedem Kunden so laufen. Jeder Kunde hat eigene Vorstellungen. Was der Kunde will, geht vor; dieses Playbook ist der Ausgangspunkt für das Gespräch. Abweichungen im Entscheidungsprotokoll des Projekts festhalten.
 > **Ausnahme:** Gesetzliche Pflichten und Sicherheit (GoBD, Datenschutz, E-Rechnung, Rechteprüfung, Datensicherung) sind nicht verhandelbar. Wünscht der Kunde hier etwas anderes, Risiko erklären und schriftlich festhalten.
@@ -78,3 +78,15 @@ Passwort ≥ 12 Zeichen (Argon2id), Zwei-Faktor (TOTP) Pflicht, Sperre nach 5 Fe
 - **Heruntergeladene Werkzeuge** (Java, Prüfprogramme): in `*.part` laden, Prüfsumme prüfen, dann umbenennen; beim Start erneut prüfen.
 - Alarm per E-Mail bei Auffälligkeiten (Sperren, Fehlversuche, Fehler).
 - Sicherheits-Header/CSP, Migrationen nur gezielt ausführen.
+
+### Testsystem / Bereitstellung – bewährter Aufbau
+
+Allgemein bewährt (erstmals justluxx-ERP, 29.10.2026; Vorlage: `justluxx-ERP/deploy/testsystem/`, Anleitung `docs/technik/testsystem.md`, Workflow `.github/workflows/testsystem.yml`):
+
+- **Ein Programmpaket (Docker-Image) für Test und Echtbetrieb.** GitHub Actions prüft, baut und fährt das komplette System einmal mit einer Wegwerf-Datenbank hoch (Probelauf); erst dann wird das Paket abgelegt. Der Server holt es nur ab. Auf dem eigenen PC ist dafür kein Docker nötig.
+- **Update per Knopfdruck** (`workflow_dispatch`, nicht automatisch bei jedem Push – Tester sollen nicht mitten im Test überrascht werden). Ablauf auf dem Server: Sicherung → Migration mit der neuen Version → Start → Gesundheitscheck (`/api/health`) → bei Fehler vorige Version wieder starten.
+- **Update-Schlüssel an genau einen Befehl binden** (`command="…deploy.sh \"$SSH_ORIGINAL_COMMAND\""` in `authorized_keys`, sudoers nur für dieses Skript, Argument streng prüfen). Zugang zum Paket-Lager nur als kurzlebiger Workflow-Schlüssel über die Standardeingabe – kein dauerhafter GitHub-Zugang auf dem Server.
+- **Datenbank-Container bekommt nur sein eigenes Passwort** (eigene `db.env`), nicht die ganze `.env` der App – sonst liegen Daten und Verschlüsselungsschlüssel am selben Ort.
+- **Mails im Testsystem abfangen:** Mailpit im Netz des App-Containers (`network_mode: "service:app"`) – für die App ist es `localhost`, keine Testmail erreicht einen echten Kunden; Web-Ansicht mit eigenem Passwort, Mails nach 7 Tagen löschen.
+- **Testsystem-Kennzeichnung zur Laufzeit lesen** (`APP_ENVIRONMENT=test` → Hinweis auf jeder Seite). Das Grundgerüst der App (Root-Layout) darf nicht alle Zugangsdaten verlangen, sonst scheitert der Build in GitHub ohne Geheimnisse.
+- Server-Einrichtung per wiederholbarem Skript; SSH-Härtung (kein root, kein Passwort) erst, nachdem der eigene Schlüssel geprüft ist – nie aussperren. Sicherung nachts und vor jedem Update, Nachtläufe als systemd-Timer (liest die `.env` sicher, anders als crontab).
