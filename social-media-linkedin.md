@@ -54,6 +54,30 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 - **Beitrag retten am ersten Tag:** 10–15 Bekannte persönlich anschreiben (um ihre Meinung bitten, nicht ums Liken), 5 Kommentare bei anderen schreiben. Nicht löschen und neu posten.
 - **Statistik richtig lesen:** Aussagekräftig sind die „erreichten Mitglieder“, nicht die Impressionen. 0 Reaktionen bei unter 20 Erreichten sagen nichts über den Text. Den Takt nicht wegen schwacher Reichweite kürzen: Die Beiträge sind trotzdem nützlich, denn Profilbesucher sehen später einen aktiven Auftritt.
 - **Datenschutz:** Adressbuch oder E-Mail-Postfach nicht in LinkedIn hochladen (Daten Dritter ohne Einwilligung). Kontakte von Hand suchen.
+- **Verlauf Start-Beitrag JJ:** am Mittag 5 erreichte Mitglieder, nach 11 Std. 21 erreichte (12 % außerhalb des Netzwerks), 1 Reaktion von außen. Der eigene Link-Kommentar zählt bei „Kommentare“ mit, beim Auswerten abziehen. Ein schwacher Mittagswert ist also noch kein Endergebnis. (exion-workspace, 29.10.2026)
+
+## Kontakte aufbauen – Kontaktanfragen
+
+**Wen anschreiben:**
+- Inhaber und Geschäftsführer der Zielgruppe, am besten aus der Region.
+- Leute, die weiterempfehlen können: Steuerberater, IT-Dienstleister, Unternehmensberater, Handwerkskammer, IHK.
+- Bestehende Bekannte und Geschäftskontakte, die noch nicht vernetzt sind. Das sind die leichtesten Zusagen.
+
+**Vorgehen:**
+1. Erst 1–2 echte Kommentare unter Beiträgen der Person schreiben, dann die Anfrage schicken. Dann wird sie deutlich eher angenommen.
+2. Die Anfrage ist kurz, nennt einen konkreten Bezug und enthält **keinen Link und kein Angebot**.
+3. Nach der Annahme kurz danken. Keine Werbenachricht hinterherschicken, das stößt auf LinkedIn die meisten ab.
+4. 5–10 Anfragen am Tag. Bei vielen nicht angenommenen Anfragen schränkt LinkedIn das Konto ein.
+5. Anrede beim ersten Kontakt im Zweifel „Sie“. Duzt die Person in ihren Beiträgen selbst, kann man auch duzen.
+6. Mit dem kostenlosen Konto gehen nur wenige Anfragen mit Nachricht pro Monat (die Grenze ändert LinkedIn immer wieder). Die Nachricht für Fremde nutzen, Bekannte auch ohne Nachricht anfragen.
+7. Keine Werkzeuge, die automatisch Anfragen verschicken. Das ist ein Verstoß gegen die LinkedIn-Regeln und beim Datenschutz heikel.
+
+**Vorlagen** (Anfrage-Nachricht max. ca. 200 Zeichen, Platzhalter anpassen):
+- *Nach einem Beitrag:* „Guten Tag Herr Müller, Ihr Beitrag zu [Thema] hat mich angesprochen, vor allem [Punkt]. Ich beschäftige mich mit KI im Mittelstand und würde mich über die Vernetzung freuen. Viele Grüße, [Name]“
+- *Region oder Branche:* „Guten Tag Frau Schmidt, als Unternehmer aus [Region] vernetze ich mich gern mit anderen Betrieben hier. Ich würde mich freuen, wenn wir in Kontakt bleiben. Viele Grüße, [Name]“
+- *Bekannte von früher:* „Hallo Thomas, wir kennen uns von [Projekt/Messe]. Ich bin inzwischen neben [Firma A] auch mit [Firma B] unterwegs und würde mich freuen, hier vernetzt zu sein. Viele Grüße, [Vorname]“
+
+(exion-workspace, 29.10.2026)
 
 ## Recht
 
