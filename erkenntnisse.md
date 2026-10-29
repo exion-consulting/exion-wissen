@@ -5,6 +5,10 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-10
 
+- **Klick-Anleitungen für JJ: Reihenfolge-Fallen ausdrücklich nennen** – Server wurde ohne SSH-Schlüssel erstellt (Schlüssel-Eingabe war abgelehnt worden, weil ein abgekürzter Wert mit „…“ kopiert wurde) → musste gelöscht und neu angelegt werden. Seitdem: „Erst X, ohne X nicht weiter“ klar sagen; Werte zum Kopieren nie abkürzen, lieber per `Set-Clipboard` direkt in die Zwischenablage legen (bei `Get-Content | Set-Clipboard` kann ein unsichtbarer Zeilenumbruch mitrutschen → `.Trim()`). (justluxx-ERP, 29.10.)
+- **PowerShell + `ssh "…\"…\"…"`** – verschachtelte Anführungszeichen kommen auf dem Server kaputt an („unexpected EOF“) → solche Befehle nicht als Einzeiler geben: erst `ssh benutzer@server`, dann den Befehl dort einfügen. (justluxx-ERP, 29.10.)
+- **Einrichtungsskript „durchgelaufen“, aber Benutzer fehlte** – der erste Lauf war unbemerkt abgebrochen → Skript mit `2>&1 | tee /root/setup.log | tail -40` starten und auf die Schlusszeile („Fertig“) achten; danach gezielt prüfen (z. B. `id jj`). (justluxx-ERP, 29.10.)
+- **Browser-Anmeldefenster (Basic Auth) merkt sich falsche Versuche** – Mailpit-Login klappte nicht, obwohl die Daten stimmten → im privaten Fenster (Strg+Umschalt+N) neu versuchen; Claude kann die Daten vorher per `Invoke-WebRequest` mit Authorization-Header prüfen. (justluxx-ERP, 29.10.)
 - **Start-Beitrag ohne Reichweite** – 160 Kontakte, Profil lange ruhig → nur 5 erreichte Mitglieder; Vorgehen siehe `social-media-linkedin.md` → „Reichweite“. (exion-workspace, 29.10.)
 - **Server-Skripte vom Windows-PC** – mit CRLF-Zeilenenden brechen `.sh`-Dateien auf dem Server ab → `.gitattributes` mit `*.sh`, `deploy/** text eol=lf` (wie schon für `*.sql`). (justluxx-ERP, 29.10.)
 - **Probeläufe testen das Ausrollen nicht** – dem Update-Job fehlte `packages: read`, das private Programmpaket wäre am Server „denied“ gewesen; nur die Gesamtprüfung fand es → den Weg auf den echten Server immer gezielt gedanklich durchspielen lassen. (justluxx-ERP, 29.10.)

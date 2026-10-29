@@ -51,6 +51,7 @@ Vorlage: `exion-website/public/.htaccess` – enthält:
 - **Nur** A/CNAME für Domain und `www` ändern. **MX, SPF, DKIM, DMARC nie anfassen** – sonst fallen die E-Mails aus.
 - Vor jeder DNS-Änderung erklären, was passiert, und Bestätigung abwarten.
 - SSL im Hosting-Panel aktivieren; Ablaufdatum notieren.
+- **checkdomain – Unteradresse auf eigenen Server zeigen lassen** (z. B. `test-erp.domain.de` auf Hetzner): Domains › Domain › „checkdomain Nameserver“ › ganz unten **„Profi-Einstellungen“** › leere Zeile: Hostname, TTL 300, Typ A, Wert = Server-IP › Speichern. **Nicht** „Subdomains“ (zeigt aufs checkdomain-Webhosting) und **nicht** die „Haupt-IP-Adresse“ ändern (sonst ist die Website weg). Ein eigener Eintrag hat Vorrang vor dem Platzhalter `*.domain.de`. Prüfen: `Resolve-DnsName name -Server 1.1.1.1` – war bei checkdomain sofort sichtbar. (justluxx-ERP, 29.10.2026)
 
 ## SEO und Barrierearmut (Mindeststandard)
 
