@@ -53,6 +53,7 @@ Stand: 28.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 
 - Auswertungen je Mitarbeiter (Umsatz je Vertriebler, Ziele, Abschlussquoten) sind Leistungsdaten über Beschäftigte. Bewährt: nur die Leitung sieht sie (eigenes Recht), jeder sieht seine eigenen Werte; im Abschnitt „Datenschutz & AI Act“ der Spezifikation nennen und Mitarbeitende informieren.
 - Gibt es einen Betriebsrat, ihn früh einbeziehen – Systeme, die Leistung auswerten können, sind dort typischerweise Thema.
+- Ziele vorgeben und Umsatz je Vertriebler anzeigen ist im Vertrieb übliche Steuerung und grundsätzlich zulässig. Voraussetzungen: Mitarbeitende vor dem Echtbetrieb informieren (welche Zahlen, wer sieht sie), Zugriff begrenzen (eigene Zahlen bzw. Leitung), keine Verhaltensprotokolle (Klicks, Bildschirmzeiten, heimliche Ranglisten). *Nach Kenntnisstand, nicht im Netz geprüft (30.10.2026):* Die bisher übliche Grundlage § 26 BDSG ist seit einem EuGH-Urteil von 2023 umstritten; man stützt sich eher direkt auf die DSGVO („für das Arbeitsverhältnis nötig“). Vor Verwendung aktuellen Stand prüfen. Beispiel: `justluxx-ERP/docs/superpowers/specs/2026-10-29-design-stufe-2a-mein-tag-design.md` Abschnitt 11.
 - Rechtsgrundlage und Mitbestimmung vom Datenschutzbeauftragten bzw. Fachanwalt bestätigen lassen; Stand vor Verwendung prüfen. Beispiel: `justluxx-ERP/docs/technik/entscheidungen-etappe-1d.md` (R11, Abschnitt Datenschutz). (justluxx-ERP, 28.10.2026)
 
 ## GoBD (bei Software mit Belegen/Rechnungen)
