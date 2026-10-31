@@ -1,6 +1,6 @@
 # Playbook: Datenschutz und Recht (Praxis-Checkliste)
 
-Stand: 28.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
+Stand: 01.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
 **Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
 
@@ -42,6 +42,7 @@ Stand: 28.10.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - **Art. 4 – KI-Kompetenz (gilt seit 02.02.2025):** Seit 27.07.2026 neu gefasst durch den „Digital Omnibus“ (VO (EU) 2026/1744): Unternehmen, die KI einsetzen, müssen **Maßnahmen** zur KI-Kompetenz ihrer Leute ergreifen – ein bestimmtes Niveau müssen sie nicht garantieren (vorher: „ausreichendes Maß sicherstellen“). Kein Zertifikat vorgeschrieben; Dokumentation (wer, wann, welche Inhalte) empfohlen. Aufsicht durch nationale Marktaufsichtsbehörden. Grundlage der EXION-Schulung. (Geprüft 28.10.2026 – Sekundärquellen + EUR-Lex-Eintrag; Wortlaut vor Rechtsaussagen auf EUR-Lex prüfen)
 - **Art. 5 – Verbote (seit 02.02.2025):** u. a. Social Scoring, manipulative KI, **Emotionserkennung am Arbeitsplatz und in Bildungseinrichtungen** (aus Gesicht/Stimme/biometrischen Daten). Laut Leitlinien der EU-Kommission (Feb. 2025) **auch im Bewerbungsverfahren**. Ausnahmen nur medizinisch/Sicherheit; reine Textauswertung fällt nicht unter das Verbot. (Geprüft 27.10.2026)
 - **Anhang III – Hochrisiko:** u. a. KI für Bewerberauswahl/-bewertung, Beförderung, Kündigung → strenge Pflichten; KMU-Kunden davon abraten.
+- **Art. 2 Abs. 10 – rein private Nutzung:** Natürliche Personen, die KI rein privat und nicht beruflich nutzen, fallen nicht unter die Betreiberpflichten. Das endet bei beruflicher Nutzung oder Nutzung über eine Firma. (Geprüft 31.10.2026 über Sekundärquellen und den AI Act Service Desk; Grenzfälle nicht geklärt)
 - **Art. 50 – Transparenz:** Chatbots/Voice Agents müssen sich als KI zu erkennen geben; KI-erzeugte, echt wirkende Inhalte kennzeichnen.
 - **DSGVO Art. 22:** Entscheidungen über Menschen (z. B. Bewerbungen) trifft ein Mensch, nicht die KI. AGG: Benachteiligung kann Entschädigung auslösen.
 

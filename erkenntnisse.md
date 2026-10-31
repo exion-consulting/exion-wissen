@@ -3,6 +3,12 @@
 Kurz, datiert, neueste oben. Format: **Thema** – was passiert ist → was wir seitdem tun. (Projekt)
 Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
+## 2026-11
+
+- **Zahlen von Prüf-Agenten nachmessen** – ein Prüfer nannte 344,21 als Mehrverlust, der echte Lauf ergab 376,50 → auch Zahlen aus Prüfberichten nicht ungeprüft in Dokumente übernehmen, sondern selbst nachmessen. (Trading Platform, 01.11.)
+- **Krypto-Börsen, Stand 10/2026** – Kraken hat eine MiCA-Lizenz (Irland), aber kein privates Konto auf zwei Namen; mehrere Zugriffsberechtigte nur beim Firmenkonto. Binance hat laut Berichten keine MiCA-Lizenz und schränkte EU-Dienste ab Juli 2026 ein; öffentliche Kursdaten antworteten im Test noch → vor Projektstart aktuell prüfen. (Trading Platform, 31.10.)
+- **Trading-Tests** → eigenes Playbook `trading-backtest.md`. (Trading Platform, 01.11.)
+
 ## 2026-10
 
 - **Next.js: Konstanten aus „use client“-Dateien** – eine Server-Seite importierte Stil-Texte aus einer Client-Datei und bekam statt Text eine Funktion; im HTML standen Fehlertexte, die Typprüfung meldete nichts → gemeinsame Konstanten in neutrale Dateien ohne „use client“ legen und von dort importieren. (justluxx-ERP, `src/app/(app)/reklamationen/page.tsx`, 31.10.)
@@ -12,7 +18,7 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 - **Windows: Port bleibt nach Server-Ende belegt** – nach dem Beenden des Entwicklungsservers hielt ein übrig gebliebener node-Prozess Port 3100, Browser-Tests starteten nicht → `Get-NetTCPConnection -LocalPort 3100` (PowerShell), nur diesen Prozess beenden. (justluxx-ERP, 30.10.)
 - **`tsx`-Skript scheitert an Paket mit reinem `import`-Export** – `@react-pdf/hyphenate` erlaubt nur `import`, ein Kommandozeilen-Skript (CommonJS unter tsx) bricht ab → kleiner Umleiter nur im Skript (`scripts/lib/esm-exports.ts`), App bleibt unberührt; einmal im Linux-Container testen (lief dort). (justluxx-ERP, 30.10.)
 - **Amtliche Quelle nicht erreichbar** – BMF-Seiten zur E-Rechnung lieferten den ganzen Tag Fehler 503 → Ersatz über seriöse Zweitquellen (IHK, PwC, Fachverband, Gesetzestext auf gesetze-im-internet.de) und im Post/Protokoll vermerken „Original vor Freigabe gegenlesen“. (exion-workspace, Social Media KW45, 29.10.)
-- **Kein Python in Git Bash auf JJs PC** – `python` startet nur den Microsoft-Store-Hinweis → Dateien mit dem Edit-Werkzeug oder `sed` bearbeiten, keine Python-Einzeiler einplanen. (alle Projekte, 29.10.)
+- **Python auf JJs PC** – `python` startet nur den Microsoft-Store-Hinweis. Seit 31.10. ist `uv` per winget installiert und bringt Python je Projekt mit (`uv run …`); in alten Terminals nicht im PATH, Pfad unter `%LOCALAPPDATA%\Microsoft\WinGet\Packages\astral-sh.uv_*\uv.exe`. Ohne Projekt weiter keine Python-Einzeiler einplanen. (alle Projekte, 29.10./31.10.)
 - **Markenfarbe aus den offiziellen Logodateien messen** – das im Projekt liegende Logo war eine Website-Variante (`#96BC3D`), die offiziellen CI-Dateien haben `#9FB80D` → beim Kunden nach Original-Logodateien fragen und die Pixel nachmessen (PowerShell `System.Drawing`, häufigste Farbe), nicht schätzen. (justluxx-ERP, 29.10.)
 - **Aufklappmenü `<details>` im Browser-Test** – Klick auf einen unsichtbaren Hilfstext (`sr-only`) schlägt fehl → `<summary aria-label="…">` und im Test `getByLabel("…")`. (justluxx-ERP, 29.10.)
 - **Klick-Anleitungen für JJ: Reihenfolge-Fallen ausdrücklich nennen** – Server wurde ohne SSH-Schlüssel erstellt (Schlüssel-Eingabe war abgelehnt worden, weil ein abgekürzter Wert mit „…“ kopiert wurde) → musste gelöscht und neu angelegt werden. Seitdem: „Erst X, ohne X nicht weiter“ klar sagen; Werte zum Kopieren nie abkürzen, lieber per `Set-Clipboard` direkt in die Zwischenablage legen (bei `Get-Content | Set-Clipboard` kann ein unsichtbarer Zeilenumbruch mitrutschen → `.Trim()`). (justluxx-ERP, 29.10.)
