@@ -1,6 +1,6 @@
 # Playbook: Skills und Agents für Claude Code bauen
 
-Stand: 29.10.2026 · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
+Stand: 01.11.2026 · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
 
 Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent** = Spezialist mit eigener Rollendatei für eine Teilaufgabe, ohne Gedächtnis zwischen zwei Aufträgen.
 
@@ -45,4 +45,6 @@ Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent**
   6. Lernregeln per Mehrfachauswahl abfragen.
 
   Agent-Entwürfe dienen so als Vorlage und Kritik, nicht als Endtext. (exion-workspace, KW45, 29.10.2026)
+- **Ältere Entwürfe vor der Freigabe auffrischen.** Do und Fr entstanden, bevor JJ seine Korrekturen gemacht hatte; sie enthielten die gelernten Regeln nicht. Vor der Freigabe alter Entwürfe die Stimme-Datei anwenden lassen und erneut prüfen. (exion-workspace, KW45, 01.11.2026)
+- **Nach einer eigenen Fassung des Menschen die Nebenangaben nachziehen.** Quellentabelle und „Gewählt“-Zeile belegten danach noch den alten Text. Text bleibt unangetastet, ein Schreiber-Auftrag stellt nur diese Abschnitte um, dann kurze Schlussprüfung. Parallele Änderungen an derselben Datei vermeiden. (exion-workspace, KW45, 01.11.2026)
 - **Datenschutz & AI Act:** Wer veröffentlicht, trägt die redaktionelle Verantwortung → menschliche Freigabe als Pflichtschritt einbauen; keine Daten Dritter ohne Zustimmung.

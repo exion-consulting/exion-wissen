@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 29.10.2026 (ergänzt KW45-Freigabe) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skript `exion-workspace\tools\folien-generator\build-linkedin.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 01.11.2026 (ergänzt KW45-Abschluss, Postbilder) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -14,6 +14,11 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 - **Pflicht-Themen: erst die Pflicht, dann die Entwarnung.** Der Einstieg „Ein KI-Zertifikat schreibt der AI Act nicht vor“ las sich wie „Schulung braucht keiner“. Besser: „Deine Mitarbeiter nutzen ChatGPT? Dann solltest du Art. 4 kennen.“ und danach „Die gute Nachricht: … Die weniger gute: …“. (exion-workspace, KW45-Montag, 29.10.2026)
 - **Ersparnis im Einstieg immer als Rechenbeispiel kennzeichnen.** „8.100 € weniger Stromkosten pro Jahr“ allein klingt wie ein Versprechen, und Werbung darf nicht irreführen. Besser: „… So viel spart unser Rechenbeispiel mit 100 Hallenleuchten.“ Die Annahmen im Post offen nennen. (exion-workspace, KW45-Mittwoch, 29.10.2026)
 - **Eigene Fassungen des Inhabers kürzen, mit seinen Worten.** Selbst geschriebene Fassungen waren 1.900–2.300 Zeichen lang (Ziel 800–1.300, vertretbar bis ca. 1.600) und enthielten Floskeln („spannend“, „vor wenigen Jahren noch undenkbar“, „nicht nur …, sondern auch …“). Streichen: Doppelungen, rhetorische Fragen hintereinander, mehrere Aufrufe am Schluss. Behalten: Fachblick („Weniger Watt allein sind noch keine gute Lichtplanung“), Praxisdetails (Schichtbetrieb, Produktionsunterbrechung) und den eigenen Standpunkt, denn das macht die Posts stark. Fachliche Ungenauigkeiten können auch in der eigenen Fassung stecken, deshalb danach immer die Faktenprüfung. (exion-workspace, KW45, 29.10.2026)
+- **Gestaffelte Pflichten Satz für Satz je Gruppe prüfen.** „Warte nicht bis Dezember 2027“ stimmt nur für kleinere Unternehmen, größere wären fast ein Jahr zu spät. Besser: „Warte nicht bis kurz vor deine Frist.“ Übergangsregeln genau nennen: Bei der E-Rechnung zählen Leistungsjahr und Rechnungsdatum. „Bis Ende 2027“ klang, als gelte das auch für Leistungen aus 2026. (exion-workspace, KW45-Donnerstag, 01.11.2026)
+- **Rechtshinweis auf die Satzstellung prüfen.** „Eine rechtliche Prüfung ersetzt KI nicht“ sagt das Gegenteil des Gemeinten. Der Fehler passierte zweimal, einmal dem Texter und einmal in der eigenen Fassung. Immer so herum: „KI ersetzt keine rechtliche Prüfung.“ (exion-workspace, KW45-Freitag, 01.11.2026)
+- **Beispiele kennzeichnen, im Text und im Bild.** Selbst zusammengesetzte Vorher/Nachher-Sätze wirken sonst wie echte Anzeigen. „Beispiel“ in der Zeile reicht („Zwei Beispieltexte. Derselbe Beruf.“). (exion-workspace, KW45-Freitag, 01.11.2026)
+- **Schluss muss zur Zielseite passen.** Ein Post darf im Erstgespräch nichts versprechen, was die Seite nicht nennt (hier: Software prüfen, Automatisierung). Entweder Satz anpassen oder Seite ergänzen. (exion-workspace, KW45-Donnerstag, 01.11.2026)
+- **Keine Sternchen im Post.** LinkedIn zeigt `**fett**` nicht fett an, sondern mit Sternchen. Aus Word oder Chat übernommene Fassungen vorher bereinigen. (exion-workspace, KW45, 01.11.2026)
 
 ## Einrichtung – Feldnamen und Stolpersteine
 
@@ -41,8 +46,9 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 | Firmenseiten-Titelbild | 1128 × 191 (doppelt erzeugen) | LinkedIn schneidet je nach Ansicht oben/unten und seitlich ab → Text mittig, viel Luft, Grafik nicht an den Rand |
 | Firmenlogo | 400 × 400 | nur Wortmarke, mittig auf Weiß |
 | Profilfoto | 800 × 800 | Kopf mittig (Kreis-Zuschnitt) |
+| Postbild | 1080 × 1080 (doppelt erzeugen) | quadratisch füllt den Handy-Bildschirm; zwei Karten (grau und mit dünnem Akzentrahmen), wenig Text in Post-Wortlaut, Beispiele kennzeichnen, Absender klein |
 
-Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--force-device-scale-factor=2` für doppelte Auflösung), Schrift lokal (woff2). Vorlage: `build-linkedin.js`.
+Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--force-device-scale-factor=2` für doppelte Auflösung), Schrift lokal (woff2). Vorlagen: `build-linkedin.js`, für Postbilder `build-linkedin-post.js` (je Post eine HTML-Datei in `linkedin\`, eine Zeile im Skript). Entwürfe aus KI-Werkzeugen sind meist nur Idee: Farben und Schrift auf den Markenstil zurückführen, Absolutes wie „nicht ausreichend“ abschwächen. (exion-workspace, KW45, 01.11.2026)
 
 ## Reichweite
 
@@ -54,7 +60,7 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 - **Beitrag retten am ersten Tag:** 10–15 Bekannte persönlich anschreiben (um ihre Meinung bitten, nicht ums Liken), 5 Kommentare bei anderen schreiben. Nicht löschen und neu posten.
 - **Statistik richtig lesen:** Aussagekräftig sind die „erreichten Mitglieder“, nicht die Impressionen. 0 Reaktionen bei unter 20 Erreichten sagen nichts über den Text. Den Takt nicht wegen schwacher Reichweite kürzen: Die Beiträge sind trotzdem nützlich, denn Profilbesucher sehen später einen aktiven Auftritt.
 - **Datenschutz:** Adressbuch oder E-Mail-Postfach nicht in LinkedIn hochladen (Daten Dritter ohne Einwilligung). Kontakte von Hand suchen.
-- **Verlauf Start-Beitrag JJ:** am Mittag 5 erreichte Mitglieder, nach 11 Std. 21 erreichte (12 % außerhalb des Netzwerks), 1 Reaktion von außen. Der eigene Link-Kommentar zählt bei „Kommentare“ mit, beim Auswerten abziehen. Ein schwacher Mittagswert ist also noch kein Endergebnis. (exion-workspace, 29.10.2026)
+- **Verlauf Start-Beitrag JJ:** am Mittag 5 erreichte Mitglieder, nach 11 Std. 21 erreichte (12 % außerhalb des Netzwerks), 1 Reaktion von außen. Der eigene Link-Kommentar zählt bei „Kommentare“ mit, beim Auswerten abziehen. Ein schwacher Mittagswert ist also noch kein Endergebnis. Nach 3 Tagen: 142 Erreichte, 248 Impressionen, 55 % außerhalb des Netzwerks, 2 Profilansichten, 0 neue Follower. Der Endwert kam also spät; Reichweite heißt aber noch nicht Interesse. Größte Gruppe waren Berufseinsteiger, deshalb Kontakte gezielt bei Entscheidern aufbauen. (exion-workspace, 29.10.–01.11.2026)
 
 ## Kontakte aufbauen – Kontaktanfragen
 
