@@ -5,6 +5,7 @@ Wird über `/logbuch` gepflegt. Ausführliches gehört in das passende Playbook.
 
 ## 2026-11
 
+- **Befehle für JJ: Anfang geht beim Kopieren verloren** – `sudo bash -c '…'` fehlte, der Server meldete „No such file or directory“ und nichts lief → solche Befehle in je einem eigenen Kopierblock zeigen und sagen, woran man den Erfolg erkennt. (justluxx-ERP, 01.11.)
 - **Amtliche Quelle bleibt tagelang weg** – die BMF-Seiten zur E-Rechnung lieferten auch am 01.11. noch Fehler 503, drei Tage nach dem ersten Versuch; Web-Archive waren für das Abruf-Werkzeug gesperrt → nicht auf „später nachlesen“ verlassen: Vorbehalt offen an JJ melden, er entscheidet, und das BMF kurz vor der Veröffentlichung selbst öffnen. (exion-workspace, Social Media KW45, 01.11.)
 - **Zahlen von Prüf-Agenten nachmessen** – ein Prüfer nannte 344,21 als Mehrverlust, der echte Lauf ergab 376,50 → auch Zahlen aus Prüfberichten nicht ungeprüft in Dokumente übernehmen, sondern selbst nachmessen. (Trading Platform, 01.11.)
 - **Krypto-Börsen, Stand 10/2026** – Kraken hat eine MiCA-Lizenz (Irland), aber kein privates Konto auf zwei Namen; mehrere Zugriffsberechtigte nur beim Firmenkonto. Binance hat laut Berichten keine MiCA-Lizenz und schränkte EU-Dienste ab Juli 2026 ein; öffentliche Kursdaten antworteten im Test noch → vor Projektstart aktuell prüfen. (Trading Platform, 31.10.)
