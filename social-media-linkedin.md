@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 01.11.2026 (ergänzt KW45-Abschluss, Postbilder) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 02.11.2026 (ergänzt KI-Bilder, Statistik zuordnen) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -50,6 +50,11 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 
 Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--force-device-scale-factor=2` für doppelte Auflösung), Schrift lokal (woff2). Vorlagen: `build-linkedin.js`, für Postbilder `build-linkedin-post.js` (je Post eine HTML-Datei in `linkedin\`, eine Zeile im Skript). Entwürfe aus KI-Werkzeugen sind meist nur Idee: Farben und Schrift auf den Markenstil zurückführen, Absolutes wie „nicht ausreichend“ abschwächen. (exion-workspace, KW45, 01.11.2026)
 
+**KI-Bilder (z. B. aus GPT)**
+- **Das Bild muss die Aussage des Posts zeigen.** Zwei Stecker mit Lücke passten zur Geschichte „alles getestet, aber die Verbindung fehlte“. Eine glänzende Software-Oberfläche widersprach einer Fehlergeschichte und sah aus wie die echte Software, also wie ein Beleg, den es nicht gibt. (exion-workspace, KW45, 02.11.2026)
+- **Text im Bild prüfen wie Text im Post.** Prozentwerte und Ersparnisse auch im Bild als Rechenbeispiel kennzeichnen („– 60 % im Rechenbeispiel“), Begriffe prüfen („mehr Betriebsstunden“ klang nach mehr Verbrauch, gemeint war die Lebensdauer), Absender ins Bild. Wirkt das Bild echt, im Bild „Symbolbild, mit KI erstellt“ ergänzen, siehe `datenschutz-recht.md` → Art. 50. (exion-workspace, KW45, 02.11.2026)
+- **Korrigieren:** Original unverändert lassen. Überlagerungen per HTML-Vorlage gehen schnell, bleiben aber sichtbar; am saubersten mit den richtigen Texten neu erzeugen. Logos freigestellt verwenden, keine weiße Fläche; auf dunklem Grund graue Slogans hell einfärben und das Logo auf eine ruhige Fläche setzen.
+
 ## Reichweite
 
 - Sichtbarkeit beim Posten auf **„Alle“** – dann sehen es über Reaktionen auch Kontakte der Kontakte.
@@ -61,6 +66,8 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 - **Statistik richtig lesen:** Aussagekräftig sind die „erreichten Mitglieder“, nicht die Impressionen. 0 Reaktionen bei unter 20 Erreichten sagen nichts über den Text. Den Takt nicht wegen schwacher Reichweite kürzen: Die Beiträge sind trotzdem nützlich, denn Profilbesucher sehen später einen aktiven Auftritt.
 - **Datenschutz:** Adressbuch oder E-Mail-Postfach nicht in LinkedIn hochladen (Daten Dritter ohne Einwilligung). Kontakte von Hand suchen.
 - **Verlauf Start-Beitrag JJ:** am Mittag 5 erreichte Mitglieder, nach 11 Std. 21 erreichte (12 % außerhalb des Netzwerks), 1 Reaktion von außen. Der eigene Link-Kommentar zählt bei „Kommentare“ mit, beim Auswerten abziehen. Ein schwacher Mittagswert ist also noch kein Endergebnis. Nach 3 Tagen: 142 Erreichte, 248 Impressionen, 55 % außerhalb des Netzwerks, 2 Profilansichten, 0 neue Follower. Der Endwert kam also spät; Reichweite heißt aber noch nicht Interesse. Größte Gruppe waren Berufseinsteiger, deshalb Kontakte gezielt bei Entscheidern aufbauen. (exion-workspace, 29.10.–01.11.2026)
+- **Vergleichswert zweiter Beitrag JJ:** Am ersten Tag 82 Erreichte (Start-Beitrag am Abend des ersten Tages: 21), 71 % außerhalb des Netzwerks, aber 0 Reaktionen und 1 Profilansicht. Das bestätigt: Reichweite heißt noch nicht Interesse. Reiner Text, kein Bild. (exion-workspace, 02.11.2026)
+- **Statistik richtig zuordnen:** Screenshots nennen den Beitrag oft nicht. Dann über die Zahlen zuordnen (Impressionen unter dem letzten Stand eines älteren Beitrags = jüngerer Beitrag) und im Protokoll vermerken, dass die Zuordnung abgeleitet ist. (exion-workspace, 02.11.2026)
 
 ## Kontakte aufbauen – Kontaktanfragen
 
