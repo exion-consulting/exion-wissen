@@ -1,6 +1,6 @@
 # Playbook: Datenschutz und Recht (Praxis-Checkliste)
 
-Stand: 02.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
+Stand: 03.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
 **Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
 
@@ -36,6 +36,13 @@ Stand: 02.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - **Datenschutzerklärung der Website** um einen Abschnitt zum Auftritt ergänzen: Anbieter (LinkedIn Ireland Unlimited Company, Dublin), nur zusammengefasste Statistiken (Page Insights), **gemeinsame Verantwortung nach Art. 26 DSGVO** mit Link auf LinkedIns „Page Insights Joint Controller Addendum“ (legal.linkedin.com/pages-joint-controller-addendum), Rechtsgrundlage Art. 6 Abs. 1 lit. f, Hinweis auf mögliche USA-Übermittlung + Link auf LinkedIns Datenschutzrichtlinie, Klarstellung „keine LinkedIn-Plugins/-Tracking auf der Website“. Vorlage: `exion-website/src/data/datenschutz.html` Abschnitt 6 (eigene Ergänzung, mit e-recht24-Modul „Social Media“ gegenprüfen).
 - Website nur **verlinken**, keine Plugins oder „Folgen“-Buttons von LinkedIn einbinden (sonst Einwilligung nötig).
 - Keine Personen ohne Zustimmung markieren oder namentlich nennen (Kunden, Teilnehmende).
+
+## Direkte Ansprache von Firmen (§ 7 UWG, Gesetz gegen unlauteren Wettbewerb)
+
+- **E-Mail:** Werbung braucht auch an Firmen die vorherige ausdrückliche Einwilligung (Abs. 2 Nr. 2). Ausnahme nur für eigene Kunden, wenn alle Voraussetzungen von Abs. 3 erfüllt sind (Adresse aus einem Verkauf, eigene ähnliche Leistungen, kein Widerspruch, Hinweis auf das Widerspruchsrecht). Für bloße Interessenten gilt sie nicht.
+- **Telefon:** Bei Firmen genügt eine zumindest mutmaßliche Einwilligung (Abs. 2 Nr. 1), bei Verbrauchern nie. Es muss also im Einzelfall ein konkreter Grund für das Interesse des Betriebs erkennbar sein.
+- **Brief:** Kein eigener Erlaubnisvorbehalt im Gesetz. Unzulässig wird er, wenn erkennbar ist, dass der Empfänger keine Werbung wünscht (Abs. 1), etwa nach Widerspruch oder bei einem Aufkleber am Briefkasten. Absender muss erkennbar sein, die DSGVO gilt für Adressen weiter. Praktische Folgerung aus dem Wortlaut, nicht anwaltlich geprüft.
+- Geprüft 03.11.2026 am Wortlaut auf gesetze-im-internet.de. (exion-workspace, 03.11.2026)
 
 ## AI Act (EU-KI-Verordnung)
 

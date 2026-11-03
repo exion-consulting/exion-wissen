@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 02.11.2026 (ergänzt KI-Bilder, Statistik zuordnen) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 03.11.2026 (ergänzt Profil auf Zielgruppe ausrichten, Premium-Abos, Anfrage ohne Notiz) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -18,7 +18,11 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 - **Rechtshinweis auf die Satzstellung prüfen.** „Eine rechtliche Prüfung ersetzt KI nicht“ sagt das Gegenteil des Gemeinten. Der Fehler passierte zweimal, einmal dem Texter und einmal in der eigenen Fassung. Immer so herum: „KI ersetzt keine rechtliche Prüfung.“ (exion-workspace, KW45-Freitag, 01.11.2026)
 - **Beispiele kennzeichnen, im Text und im Bild.** Selbst zusammengesetzte Vorher/Nachher-Sätze wirken sonst wie echte Anzeigen. „Beispiel“ in der Zeile reicht („Zwei Beispieltexte. Derselbe Beruf.“). (exion-workspace, KW45-Freitag, 01.11.2026)
 - **Schluss muss zur Zielseite passen.** Ein Post darf im Erstgespräch nichts versprechen, was die Seite nicht nennt (hier: Software prüfen, Automatisierung). Entweder Satz anpassen oder Seite ergänzen. (exion-workspace, KW45-Donnerstag, 01.11.2026)
-- **Keine Sternchen im Post.** LinkedIn zeigt `**fett**` nicht fett an, sondern mit Sternchen. Aus Word oder Chat übernommene Fassungen vorher bereinigen. (exion-workspace, KW45, 01.11.2026)
+- **Keine Sternchen im Post.** LinkedIn zeigt `**fett**` nicht fett an, sondern mit Sternchen. Aus Word oder Chat übernommene Fassungen vorher bereinigen. Das gilt auch für den Info-Text. (exion-workspace, KW45, 01.11.2026)
+- **Profil auf die Zielgruppe ausrichten:** Die Zielgruppe gehört in den Slogan, „Mittelstand“ allein spricht Handwerker nicht an („für Handwerk und Mittelstand“). Nutzen statt Beratersprache: „mehr Zeit fürs Geschäft“ statt „effizientere Prozesse“. Das stärkste Argument gehört in die erste Zeile des Info-Texts, denn vor „mehr anzeigen“ stehen nur wenige Zeilen. (exion-workspace, 03.11.2026)
+- **Abschnitt „Im Fokus“:** Reihenfolge Erstgespräch, Praxisbeweis, Werdegang. Die eigene Position steht ohnehin unter „Berufserfahrung“ und muss dort nicht doppelt hin. Zertifikate bleiben unter „Bescheinigungen“. (exion-workspace, 03.11.2026)
+- **Berufserfahrung kurz halten:** Beschreibungen wiederholen den Info-Text nicht, ein Satz zu den Leistungen reicht. Startdaten gegen den chronologischen Handelsregisterauszug prüfen, denn „selbstständig seit“ und „Geschäftsführer seit“ können auseinanderfallen. (exion-workspace, 03.11.2026)
+- **Zweite Meinung anderer KIs prüfen:** GPT hatte gute Hinweise, machte aber klare Sätze zu Floskeln („nicht nur aus Beratungsgesprächen“ wurde zu „Herausforderungen … aus der Theorie“, dazu „Weg mit KI“). Alleinstellende Sätze beim Überarbeiten bewusst schützen. (exion-workspace, 03.11.2026)
 
 ## Einrichtung – Feldnamen und Stolpersteine
 
@@ -91,7 +95,7 @@ Tagesplan in 15 Minuten: 3–5 Kommentare, 5–10 Anfragen (vor allem an Leute, 
 3. Nach der Annahme kurz danken. Keine Werbenachricht hinterherschicken, das stößt auf LinkedIn die meisten ab.
 4. 5–10 Anfragen am Tag. Bei vielen nicht angenommenen Anfragen schränkt LinkedIn das Konto ein.
 5. Anrede beim ersten Kontakt im Zweifel „Sie“. Duzt die Person in ihren Beiträgen selbst, kann man auch duzen.
-6. Mit dem kostenlosen Konto gehen nur wenige Anfragen mit Nachricht pro Monat (die Grenze ändert LinkedIn immer wieder). Die Nachricht für Fremde nutzen, Bekannte auch ohne Nachricht anfragen.
+6. Mit dem kostenlosen Konto gehen nur wenige Anfragen mit Nachricht pro Monat (die Grenze ändert LinkedIn immer wieder), und die Option „Nachricht hinzufügen“ kann ganz fehlen. Die Nachricht für Fremde nutzen, Bekannte auch ohne Nachricht anfragen. Direkte Nachrichten an Nicht-Kontakte gehen nur mit Premium (InMail). Ohne Notiz ist der Profil-Slogan die eigentliche Ansprache, die erste Nachricht kommt nach der Annahme, mit einer leicht zu beantwortenden Frage statt eines Angebots. (exion-workspace, 03.11.2026)
 7. Keine Werkzeuge, die automatisch Anfragen verschicken. Das ist ein Verstoß gegen die LinkedIn-Regeln und beim Datenschutz heikel.
 
 **Vorlagen** (Anfrage-Nachricht max. ca. 200 Zeichen, Platzhalter anpassen):
@@ -99,7 +103,15 @@ Tagesplan in 15 Minuten: 3–5 Kommentare, 5–10 Anfragen (vor allem an Leute, 
 - *Region oder Branche:* „Guten Tag Frau Schmidt, als Unternehmer aus [Region] vernetze ich mich gern mit anderen Betrieben hier. Ich würde mich freuen, wenn wir in Kontakt bleiben. Viele Grüße, [Name]“
 - *Bekannte von früher:* „Hallo Thomas, wir kennen uns von [Projekt/Messe]. Ich bin inzwischen neben [Firma A] auch mit [Firma B] unterwegs und würde mich freuen, hier vernetzt zu sein. Viele Grüße, [Vorname]“
 
-(exion-workspace, 29.10.2026)
+- *Nach der Annahme:* „Danke fürs Vernetzen, Herr Müller. Ich komme selbst aus dem Handwerk und schaue mir heute an, wo KI Betrieben wirklich Zeit spart. Mich interessiert: Was frisst bei Ihnen im Alltag am meisten Zeit, die Sie lieber anders nutzen würden?“ (Handwerks-Satz nur, wenn er stimmt.)
+
+(exion-workspace, 29.10.2026, ergänzt 03.11.2026)
+
+## Premium – vor dem Kauf prüfen
+
+- **Es gibt zwei verschiedene Abos:** Premium für die Unternehmensseite (Reichweite und Besucher der Seite) und Premium fürs persönliche Profil. Anfragen und Nachrichten laufen über das persönliche Profil, das Seiten-Abo hilft dabei also nicht. Erkennbar im Einrichtungsfenster an „Premium für Ihr Unternehmen“. (exion-workspace, 03.11.2026)
+- **Nachrichten an Fremde (InMails) sind begrenzt:** Kontingent in der Premium-Verwaltung nachsehen, vor allem für wichtige Kontakte nutzen. Für die Breite reicht es nicht.
+- **Testphase und Kündigung (Seiten-Abo):** Unternehmensseite → Premium-Funktionen → Abonnementdetails → Abonnement verwalten. Gratisphase spätestens 24 Stunden vor Ablauf kündigen, sonst wird sie automatisch kostenpflichtig. Erstattung innerhalb von 7 Tagen nach Abbuchung über den Support, nur durch den Admin, der abgeschlossen hat. Laut LinkedIn-Hilfe, Stand 03.11.2026.
 
 ## Recht
 
