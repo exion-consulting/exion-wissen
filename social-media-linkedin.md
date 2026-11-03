@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 03.11.2026 (ergänzt Profil auf Zielgruppe ausrichten, Premium-Abos, Anfrage ohne Notiz) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 03.11.2026 (ergänzt Profil auf Zielgruppe ausrichten, Premium-Abos, Anfrage ohne Notiz, Vorlage Fremder Geschäftsführer, Zeichengrenze 300) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -97,8 +97,10 @@ Tagesplan in 15 Minuten: 3–5 Kommentare, 5–10 Anfragen (vor allem an Leute, 
 5. Anrede beim ersten Kontakt im Zweifel „Sie“. Duzt die Person in ihren Beiträgen selbst, kann man auch duzen.
 6. Mit dem kostenlosen Konto gehen nur wenige Anfragen mit Nachricht pro Monat (die Grenze ändert LinkedIn immer wieder), und die Option „Nachricht hinzufügen“ kann ganz fehlen. Die Nachricht für Fremde nutzen, Bekannte auch ohne Nachricht anfragen. Direkte Nachrichten an Nicht-Kontakte gehen nur mit Premium (InMail). Ohne Notiz ist der Profil-Slogan die eigentliche Ansprache, die erste Nachricht kommt nach der Annahme, mit einer leicht zu beantwortenden Frage statt eines Angebots. (exion-workspace, 03.11.2026)
 7. Keine Werkzeuge, die automatisch Anfragen verschicken. Das ist ein Verstoß gegen die LinkedIn-Regeln und beim Datenschutz heikel.
+8. **Keine Sätze, die auf jeden passen.** „Ich vernetze mich gern mit Geschäftsführern aus Industrie und Mittelstand“ liest sich wie eine Serienanfrage. Mindestens einen Bezug zum Kontakt nennen, zur Not seine Branche. Bei Fremden ohne Anlass KI und Angebot ganz weglassen und erst nach der Annahme ansprechen. (exion-workspace, 03.11.2026)
 
-**Vorlagen** (Anfrage-Nachricht max. ca. 200 Zeichen, Platzhalter anpassen):
+**Vorlagen** (Anfrage-Nachricht bis 300 Zeichen, Stand 03.11.2026 bei JJs Konto; die Grenze kann je Konto abweichen, der Zähler im Eingabefeld zeigt sie an. Platzhalter anpassen):
+- *Fremder Geschäftsführer aus der Zielbranche, ohne Anlass:* „Hallo Herr [Nachname], ich komme ursprünglich aus dem Handwerk und bin heute selbst Unternehmer. Unternehmen wie Ihres aus der [Branche, z. B. Formtechnik und Metallverarbeitung] finde ich spannend. Ich freue mich über eine Vernetzung!“ (ca. 210 Zeichen; Handwerks-Satz nur, wenn er stimmt)
 - *Nach einem Beitrag:* „Guten Tag Herr Müller, Ihr Beitrag zu [Thema] hat mich angesprochen, vor allem [Punkt]. Ich beschäftige mich mit KI im Mittelstand und würde mich über die Vernetzung freuen. Viele Grüße, [Name]“
 - *Region oder Branche:* „Guten Tag Frau Schmidt, als Unternehmer aus [Region] vernetze ich mich gern mit anderen Betrieben hier. Ich würde mich freuen, wenn wir in Kontakt bleiben. Viele Grüße, [Name]“
 - *Bekannte von früher:* „Hallo Thomas, wir kennen uns von [Projekt/Messe]. Ich bin inzwischen neben [Firma A] auch mit [Firma B] unterwegs und würde mich freuen, hier vernetzt zu sein. Viele Grüße, [Vorname]“
