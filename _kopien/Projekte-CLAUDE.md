@@ -23,6 +23,7 @@ Nicht alles auf einmal lesen, nur die Datei zum Thema der Aufgabe:
 | `_wissen\ki-agents-skills.md` | Skills und Agents für Claude Code bauen, prüfen, testen (z. B. Redaktion, Assistenten für Kunden) |
 | `_wissen\social-media-linkedin.md` | LinkedIn-Profil/Firmenseite einrichten, Titelbilder, Reichweite, Social-Media-Texte (EXION und Kunden) |
 | `_wissen\trading-backtest.md` | Trading-Strategien testen: Kriterien, Limits, Kosten, Vergleich, typische Rechenfehler |
+| `_wissen\arbeitsumgebung.md` | Befehle, Werkzeuge und Eigenheiten auf JJs Windows-PC, Anleitungen für JJ, GitHub/Sicherung, Sitzungen |
 | `_wissen\erkenntnisse.md` | vor jedem neuen Projekt kurz überfliegen: Stolpersteine und Lösungen |
 
 **Pflege:** Wenn in einem Projekt etwas Wiederverwendbares gelernt wird (Lösung, Stolperstein, bewährtes Vorgehen), am Ende der Etappe in die passende Datei eintragen – JJ kann dafür `/logbuch` aufrufen.

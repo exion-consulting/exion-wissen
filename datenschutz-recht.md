@@ -1,6 +1,6 @@
 # Playbook: Datenschutz und Recht (Praxis-Checkliste)
 
-Stand: 03.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
+Stand: 09.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
 **Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
 
@@ -52,6 +52,8 @@ Stand: 03.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - **Art. 2 Abs. 10 – rein private Nutzung:** Natürliche Personen, die KI rein privat und nicht beruflich nutzen, fallen nicht unter die Betreiberpflichten. Das endet bei beruflicher Nutzung oder Nutzung über eine Firma. (Geprüft 31.10.2026 über Sekundärquellen und den AI Act Service Desk; Grenzfälle nicht geklärt)
 - **Art. 50 – Transparenz:** Chatbots/Voice Agents müssen sich als KI zu erkennen geben; KI-erzeugte, echt wirkende Inhalte kennzeichnen. Art. 50 Abs. 4 (täuschend echte Inhalte, Pflicht der Betreiber) gilt seit 02.08.2026; der Digital Omnibus verschiebt nur die technische Markierung (Abs. 2) für bestehende KI-Systeme bis 02.12.2026. (Geprüft 02.11.2026 über Sekundärquellen, Originaltext gegenlesen)
 - **KI-Bilder in der Werbung:** Echt wirkende KI-Bilder von Hallen, Produkten oder Ergebnissen vorsorglich im Bild kennzeichnen („Symbolbild, mit KI erstellt“), weil sie sonst wie echte Referenzen wirken (auch Thema irreführende Werbung). Ob solche Bilder unter die Pflicht fallen, ist nicht abschließend geklärt. Klar erkennbare Sinnbilder sind weniger heikel, ein Hinweis im ersten Kommentar kostet aber nichts. (exion-workspace, 02.11.2026)
+- **Nach einer Gesetzesänderung alle Unterlagen durchsuchen, auch fertige Office-Dateien:** Nach der Neufassung von Art. 4 waren Skripte und Website aktuell, aber Leistungsmappe, Handzettel und Angebot (PPTX/DOCX) enthielten noch alten Wortlaut → Text in Office-Dateien durchsuchen mit `unzip -p datei.pptx | grep -c "Suchwort"`, danach neu erzeugen. Der Prüf-Agent hatte die Änderung gefunden – Faktencheck bei Rechtsthemen ernst nehmen. (exion-workspace, 28.10.)
+- **Rechtliche Aussagen in Vorträgen** vor dem Einsatz an der Quelle prüfen und die Quelle in die Sprechernotiz schreiben. (Vortrag 3, 27.10.)
 - **DSGVO Art. 22:** Entscheidungen über Menschen (z. B. Bewerbungen) trifft ein Mensch, nicht die KI. AGG: Benachteiligung kann Entschädigung auslösen.
 
 ## Chatbots / Voice Agents für Kunden (EXION als Anbieter)

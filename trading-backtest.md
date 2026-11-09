@@ -18,3 +18,8 @@ Stand: 01.11.2026 · Quelle: Projekt `Trading Platform`, Etappe 1 (Bericht und E
 ## Grenzen im Bericht nennen
 
 Heutige Coin-Liste (Survivorship Bias), Stops zum Stop-Kurs sind im Kurssturz zu günstig, ein Zeitraum ist keine Garantie. Bereits gesehene Daten sind kein unberührter Test mehr; die echte Prüfung ist danach ein Paper-Lauf ab heute.
+
+## Börsen und Zugang (Stand 10/2026, vor Projektstart neu prüfen)
+
+- **Kraken** hat eine MiCA-Lizenz (Irland), aber kein privates Konto auf zwei Namen; mehrere Zugriffsberechtigte nur beim Firmenkonto.
+- **Binance** hat laut Berichten keine MiCA-Lizenz und schränkte EU-Dienste ab Juli 2026 ein; öffentliche Kursdaten antworteten im Test noch. (Trading Platform, 31.10.)
