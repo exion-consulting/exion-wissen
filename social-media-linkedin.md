@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 03.11.2026 (ergänzt Profil auf Zielgruppe ausrichten, Premium-Abos, Anfrage ohne Notiz, Vorlage Fremder Geschäftsführer, Zeichengrenze 300) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 09.11.2026 (ergänzt Auswertung über Wochen führen, Zeitraum-Filter in der Statistik) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -72,6 +72,8 @@ Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--
 - **Verlauf Start-Beitrag JJ:** am Mittag 5 erreichte Mitglieder, nach 11 Std. 21 erreichte (12 % außerhalb des Netzwerks), 1 Reaktion von außen. Der eigene Link-Kommentar zählt bei „Kommentare“ mit, beim Auswerten abziehen. Ein schwacher Mittagswert ist also noch kein Endergebnis. Nach 3 Tagen: 142 Erreichte, 248 Impressionen, 55 % außerhalb des Netzwerks, 2 Profilansichten, 0 neue Follower. Der Endwert kam also spät; Reichweite heißt aber noch nicht Interesse. Größte Gruppe waren Berufseinsteiger, deshalb Kontakte gezielt bei Entscheidern aufbauen. (exion-workspace, 29.10.–01.11.2026)
 - **Vergleichswert zweiter Beitrag JJ:** Am ersten Tag 82 Erreichte (Start-Beitrag am Abend des ersten Tages: 21), 71 % außerhalb des Netzwerks, aber 0 Reaktionen und 1 Profilansicht. Das bestätigt: Reichweite heißt noch nicht Interesse. Reiner Text, kein Bild. (exion-workspace, 02.11.2026)
 - **Statistik richtig zuordnen:** Screenshots nennen den Beitrag oft nicht. Dann über die Zahlen zuordnen (Impressionen unter dem letzten Stand eines älteren Beitrags = jüngerer Beitrag) und im Protokoll vermerken, dass die Zuordnung abgeleitet ist. (exion-workspace, 02.11.2026)
+- **Zeitraum-Filter beachten:** Der Filter oben in „Analysedaten zu Inhalten“ (z. B. „7 Tage“) gilt vermutlich auch für „Die erfolgreichsten Beiträge“. Der Start-Beitrag stand dort mit 93 Impressionen, hatte aber nach 3 Tagen schon 248. Gesamtwerte je Beitrag deshalb über „Alle Beiträge anzeigen“ oder die Analyse des einzelnen Beitrags ablesen. Der Wochenvergleich (z. B. −24 %) ist nach einem starken Start-Beitrag verzerrt. (exion-workspace, 09.11.2026)
+- **Auswertung über Wochen führen:** eine Datei je Kanal (Beispiel `exion-workspacesocial-mediaauswertung.md`). Je Beitrag Zahl und Ablesedatum eintragen. Werte, die weniger als 3 Tage nach dem Posten abgelesen wurden, gelten als vorläufig. Wochenwerte und die größte Zielgruppe je Kategorie dazu. Auffälligkeiten nur als „Beobachtung“ notieren. Regeln erst ab ca. 20 Beiträgen mit endgültigen Zahlen ableiten, vorher entscheidet bei 20–90 Aufrufen je Beitrag oft der Zufall. Den Kunden bei Redaktionsstart darauf einstellen: Aussagekräftig wird es nach 4–6 Wochen. (exion-workspace, 09.11.2026)
 
 ## Kontakte aufbauen – Kontaktanfragen
 
