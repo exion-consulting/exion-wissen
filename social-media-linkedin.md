@@ -1,6 +1,6 @@
 # Playbook: Social Media / LinkedIn (für EXION und Kunden)
 
-Stand: 12.11.2026 (ergänzt Beitragstabelle als Quelle, Spalten ohne Köpfe zuordnen, Profilansichten datensparsam, Herkunft Profilansichten) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
+Stand: 16.11.2026 (Hochformat 4:5, Beispiele Dritter, Reihen-Auftakt; ergänzt Beitragstabelle als Quelle, Spalten ohne Köpfe zuordnen, Profilansichten datensparsam, Herkunft Profilansichten) · Quelle: Einrichtung LinkedIn für JJ/EXION – Texte in `exion-workspace\social-media\linkedin-profil.md`, Grafiken-Skripte `exion-workspace\tools\folien-generator\build-linkedin.js` und `build-linkedin-post.js`, Redaktion `/social-media` (siehe `ki-agents-skills.md`).
 Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zweifel Screenshot vom Kunden geben lassen.
 
 ## Strategie für KMU-Inhaber
@@ -22,6 +22,8 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 - **Profil auf die Zielgruppe ausrichten:** Die Zielgruppe gehört in den Slogan, „Mittelstand“ allein spricht Handwerker nicht an („für Handwerk und Mittelstand“). Nutzen statt Beratersprache: „mehr Zeit fürs Geschäft“ statt „effizientere Prozesse“. Das stärkste Argument gehört in die erste Zeile des Info-Texts, denn vor „mehr anzeigen“ stehen nur wenige Zeilen. (exion-workspace, 03.11.2026)
 - **Abschnitt „Im Fokus“:** Reihenfolge Erstgespräch, Praxisbeweis, Werdegang. Die eigene Position steht ohnehin unter „Berufserfahrung“ und muss dort nicht doppelt hin. Zertifikate bleiben unter „Bescheinigungen“. (exion-workspace, 03.11.2026)
 - **Berufserfahrung kurz halten:** Beschreibungen wiederholen den Info-Text nicht, ein Satz zu den Leistungen reicht. Startdaten gegen den chronologischen Handelsregisterauszug prüfen, denn „selbstständig seit“ und „Geschäftsführer seit“ können auseinanderfallen. (exion-workspace, 03.11.2026)
+- **Beispiele von Dritten, solange es keine eigenen Kunden gibt:** „Bei einem Kunden“ liest man als eigenen Kunden – stimmt das nicht, „in einem Betrieb habe ich gesehen …“ schreiben. Anonym, ohne Branche und Ort, den Mitbewerber nicht vorführen, nur belegte Lücken nennen (z. B. „kein AVV“), nichts als „rechtswidrig“ bezeichnen. (exion-workspace, 16.11.2026)
+- **Auftakt einer Post-Reihe:** Eine reine Programmankündigung („Woche 1 …, Woche 2 …“) bekam schwache Noten für die Aussage. Besser: zwei Alltagsbilder im Einstieg („Ein Laufzettel, den keiner findet. Ein Postfach, das überläuft.“), je ein Satz, was fehlt und was hilft, dann die Übersicht. Die Übersicht ist ein öffentliches Versprechen – erst nach Freigabe des Plans posten. (exion-workspace, 16.11.2026)
 - **Zweite Meinung anderer KIs prüfen:** GPT hatte gute Hinweise, machte aber klare Sätze zu Floskeln („nicht nur aus Beratungsgesprächen“ wurde zu „Herausforderungen … aus der Theorie“, dazu „Weg mit KI“). Alleinstellende Sätze beim Überarbeiten bewusst schützen. (exion-workspace, 03.11.2026)
 
 ## Einrichtung – Feldnamen und Stolpersteine
@@ -50,13 +52,14 @@ Keine Garantie für LinkedIn-Oberfläche: Bezeichnungen ändern sich – im Zwei
 | Firmenseiten-Titelbild | 1128 × 191 (doppelt erzeugen) | LinkedIn schneidet je nach Ansicht oben/unten und seitlich ab → Text mittig, viel Luft, Grafik nicht an den Rand |
 | Firmenlogo | 400 × 400 | nur Wortmarke, mittig auf Weiß |
 | Profilfoto | 800 × 800 | Kopf mittig (Kreis-Zuschnitt) |
-| Postbild | 1080 × 1080 (doppelt erzeugen) | quadratisch füllt den Handy-Bildschirm; zwei Karten (grau und mit dünnem Akzentrahmen), wenig Text in Post-Wortlaut, Beispiele kennzeichnen, Absender klein |
+| Postbild / Karussell-Folie | 1080 × 1350, Hochformat 4:5 (doppelt erzeugen) | seit 11/2026 Standard (füllt den Handy-Bildschirm mehr als quadratisch); wenig Text im Post-Wortlaut, Beispiele kennzeichnen, Absender klein. Werkzeug: `build-linkedin-carousel.js` mit Folienplan (JSON), Bausteine in `lib/linkedin-vorlagen.js` |
 
 Erzeugung: HTML-Seite in Zielgröße + Bildschirmfoto mit Edge ohne Fenster (`--force-device-scale-factor=2` für doppelte Auflösung), Schrift lokal (woff2). Vorlagen: `build-linkedin.js`, für Postbilder `build-linkedin-post.js` (je Post eine HTML-Datei in `linkedin\`, eine Zeile im Skript). Entwürfe aus KI-Werkzeugen sind meist nur Idee: Farben und Schrift auf den Markenstil zurückführen, Absolutes wie „nicht ausreichend“ abschwächen. (exion-workspace, KW45, 01.11.2026)
 
 **KI-Bilder (z. B. aus GPT)**
 - **Das Bild muss die Aussage des Posts zeigen.** Zwei Stecker mit Lücke passten zur Geschichte „alles getestet, aber die Verbindung fehlte“. Eine glänzende Software-Oberfläche widersprach einer Fehlergeschichte und sah aus wie die echte Software, also wie ein Beleg, den es nicht gibt. (exion-workspace, KW45, 02.11.2026)
 - **Text im Bild prüfen wie Text im Post.** Prozentwerte und Ersparnisse auch im Bild als Rechenbeispiel kennzeichnen („– 60 % im Rechenbeispiel“), Begriffe prüfen („mehr Betriebsstunden“ klang nach mehr Verbrauch, gemeint war die Lebensdauer), Absender ins Bild. Wirkt das Bild echt, im Bild „Symbolbild, mit KI erstellt“ ergänzen, siehe `datenschutz-recht.md` → Art. 50. (exion-workspace, KW45, 02.11.2026)
+- **Format:** KI-Motive gleich im Hochformat 4:5 bestellen und oben Platz für die Überschrift lassen. Den Hinweis „Symbolbild, mit KI erstellt“ setzt unser Werkzeug (Baustein `motiv-voll`, `ki_hinweis`), nicht die KI – ein im Motiv eingebauter Hinweis wurde beim Zuschnitt von 3:4 auf 4:5 abgeschnitten. (exion-workspace, 16.11.2026)
 - **Korrigieren:** Original unverändert lassen. Überlagerungen per HTML-Vorlage gehen schnell, bleiben aber sichtbar; am saubersten mit den richtigen Texten neu erzeugen. Logos freigestellt verwenden, keine weiße Fläche; auf dunklem Grund graue Slogans hell einfärben und das Logo auf eine ruhige Fläche setzen.
 
 ## Reichweite

@@ -1,6 +1,6 @@
 # Playbook: Datenschutz und Recht (Praxis-Checkliste)
 
-Stand: 09.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
+Stand: 16.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Projekten. Bei Unsicherheit Fachanwalt / Steuerberater einbeziehen.
 
 **Grundsatz (seit 28.10.2026):** Jedes Projekt wird von Anfang an DSGVO- und EU-AI-Act-konform geplant und gebaut. Jedes Konzept enthält einen Abschnitt „Datenschutz & AI Act“ (Pflichtpunkte siehe `Projekte\CLAUDE.md`). Diese Datei ist die Checkliste dafür.
 
@@ -9,6 +9,9 @@ Stand: 09.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - Für **jeden** Dienst, der personenbezogene Daten verarbeitet: Hosting (Hetzner, in konsoleH), Google Workspace (CDPA in der Admin-Konsole), n8n (Settings → DPA), KI-Anbieter, Newsletter-Tools.
 - Ablage: Google Drive → Verwaltung/Datenschutz/AVV. Bei neuen Diensten AVV **vor** dem Start abschließen und in der Datenschutzerklärung nennen.
 - Bei Kundenprojekten: Ist EXION selbst Auftragsverarbeiter (z. B. Hosting/Betreuung), braucht der Kunde einen AVV mit EXION.
+
+- **KI-Dienste mit Sitz/Servern in den USA:** Der EU-US-Datenschutzrahmen (Angemessenheitsbeschluss (EU) 2023/1795) gilt derzeit, ist aber angefochten (Rechtsmittel C-703/25 P beim EuGH; Brief des EDSA vom 31.07.2026 mit Bitte um Neubewertung nach dem US-Urteil Trump v. Slaughter). Mit zertifiziertem Anbieter und AVV „kann das derzeit ein Weg sein“ – in Texten nie „erlaubt“ oder „verboten“, Einzelfall vom Fachanwalt/DSB prüfen lassen. (Geprüft 16.11.2026 durch Faktenprüfer: Kommissionsseite, EDSA-PDF, Sekundärquellen; jüngste Bestätigung Mitte Sept. 2026)
+- **ChatGPT im Geschäftskonto (Business/Team-Workspace):** Laut Einstellungen → Datenkontrollen verwendet OpenAI Daten aus dem Workspace standardmäßig nicht zum Training, eine Zustimmung ist dort gar nicht möglich (Screenshot JJ, 16.11.2026). AVV/DPA für den Workspace trotzdem prüfen bzw. abschließen. Für die API gilt eine eigene Checkliste (DPA, EU-Speicherung, Aufbewahrung, `store: false`) – siehe `exion-workspace	oolssparringREADME.md`. Ins Sparring nur Inhalte, die ohnehin veröffentlicht werden.
 
 ## Website-Rechtstexte
 
@@ -53,6 +56,7 @@ Stand: 09.11.2026 · Keine Rechtsberatung – Orientierung aus den bisherigen Pr
 - **Art. 50 – Transparenz:** Chatbots/Voice Agents müssen sich als KI zu erkennen geben; KI-erzeugte, echt wirkende Inhalte kennzeichnen. Art. 50 Abs. 4 (täuschend echte Inhalte, Pflicht der Betreiber) gilt seit 02.08.2026; der Digital Omnibus verschiebt nur die technische Markierung (Abs. 2) für bestehende KI-Systeme bis 02.12.2026. (Geprüft 02.11.2026 über Sekundärquellen, Originaltext gegenlesen)
 - **KI-Bilder in der Werbung:** Echt wirkende KI-Bilder von Hallen, Produkten oder Ergebnissen vorsorglich im Bild kennzeichnen („Symbolbild, mit KI erstellt“), weil sie sonst wie echte Referenzen wirken (auch Thema irreführende Werbung). Ob solche Bilder unter die Pflicht fallen, ist nicht abschließend geklärt. Klar erkennbare Sinnbilder sind weniger heikel, ein Hinweis im ersten Kommentar kostet aber nichts. (exion-workspace, 02.11.2026)
 - **Nach einer Gesetzesänderung alle Unterlagen durchsuchen, auch fertige Office-Dateien:** Nach der Neufassung von Art. 4 waren Skripte und Website aktuell, aber Leistungsmappe, Handzettel und Angebot (PPTX/DOCX) enthielten noch alten Wortlaut → Text in Office-Dateien durchsuchen mit `unzip -p datei.pptx | grep -c "Suchwort"`, danach neu erzeugen. Der Prüf-Agent hatte die Änderung gefunden – Faktencheck bei Rechtsthemen ernst nehmen. (exion-workspace, 28.10.)
+- **Feste Regeln sind in der Regel kein KI-System:** Automatisierungen, deren Regeln Menschen festgelegt haben (Pflichtfelder, Bestellvorschlag nach Formel, Tastenmenü), fallen nach unserem Verständnis nicht unter den Begriff KI-System (Art. 3 Nr. 1, Erwägungsgrund 12) und damit nicht allein deshalb unter AI-Act-Pflichten; die DSGVO gilt trotzdem, sobald Personendaten verarbeitet werden. *Merkposten (16.11.2026, aus GPT-Sparring und Kampagnenplan) – Wortlaut vor öffentlicher Verwendung an EUR-Lex prüfen.*
 - **Rechtliche Aussagen in Vorträgen** vor dem Einsatz an der Quelle prüfen und die Quelle in die Sprechernotiz schreiben. (Vortrag 3, 27.10.)
 - **DSGVO Art. 22:** Entscheidungen über Menschen (z. B. Bewerbungen) trifft ein Mensch, nicht die KI. AGG: Benachteiligung kann Entschädigung auslösen.
 

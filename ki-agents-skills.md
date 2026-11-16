@@ -1,6 +1,6 @@
 # Playbook: Skills und Agents für Claude Code bauen
 
-Stand: 09.11.2026 · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
+Stand: 16.11.2026 (Sparring mit zweiter KI, Abbruchregel, Ankündigungen gegen Plan) · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
 
 Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent** = Spezialist mit eigener Rollendatei für eine Teilaufgabe, ohne Gedächtnis zwischen zwei Aufträgen.
 
@@ -25,13 +25,16 @@ Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent**
 - **Zahlen von Prüf-Agenten selbst nachmessen:** Ein Prüfer nannte 344,21 als Mehrverlust, der echte Lauf ergab 376,50; GPT nannte einen Text „unter 200 Zeichen“, es waren ca. 215 → Zahlen und Längen aus Prüfberichten und Zweitmeinungen nie ungeprüft übernehmen. (Trading Platform, 01.11.; exion-workspace, 03.11.)
 - **Amtliche Quelle nicht erreichbar:** Die BMF-Seiten zur E-Rechnung lieferten mehrere Tage Fehler 503, Web-Archive waren für das Abruf-Werkzeug gesperrt → seriöse Zweitquellen nutzen (IHK, Fachverband, Gesetzestext auf gesetze-im-internet.de), den Vorbehalt offen an JJ melden („Original vor Freigabe gegenlesen“) und nicht auf „später nachlesen“ verlassen. JJ entscheidet und öffnet die Quelle kurz vor der Veröffentlichung selbst. (exion-workspace, Social Media KW45, 29.10./01.11.)
 - **Erfindungen verhindern:** Agents (auch Prüfer in Verbesserungsvorschlägen) erfinden gern Erlebnisse, Zahlen, Anlässe. Regel: Neues, das nicht belegt ist, nur als `[RUECKFRAGE: …]` – nie als fertigen Satz.
+- **Sparring mit einer zweiten KI (z. B. GPT) – von Hand:** Ein Agent schreibt ein „Paket“ mit fertigen Kopierblöcken (Rolle, Regeln, Inhalt, Antwortformat mit Note 1–10); der Mensch kopiert sie in die zweite KI und bringt die Antwort zurück. Ins Paket nur, was ohnehin veröffentlicht wird – keine Kundendaten, Namen Dritter, internen Zahlen. **Die Antworten selbst kritisch bewerten** (übernehmen / prüfen / verwerfen mit Grund): GPT meldete Tippfehler, die nicht im Text standen, zählte die Länge falsch und schlug „stärkere“ Fassungen vor, die Erlebnisse voraussetzen, die es nicht gab. Für einen Kampagnenplan brachte das Sparring über 3 Runden echte Verbesserung (Note 6 → 8 → 9/10). Gleicher Chat für Folgerunden, damit die KI ihre eigene Kritik kennt. (exion-workspace, Social Media, 16.11.2026)
+- **Abbruchregel bei vielen Prüfrunden:** Nach 4–5 Runden schwankten die Noten des internen Wirkungsprüfers (7 → 6), weil jeder neue Prüfer-Aufruf die umgesetzten Vorschläge des vorigen neu bewertet und neue findet. Bewährt: Prüfer → 2 Runden mit der zweiten KI → höchstens 1 Feinschliff → der Mensch entscheidet. Fortschritt (Note steigt) ist das Kriterium, nicht „bis der Prüfer zufrieden ist“. (exion-workspace, 16.11.2026)
+- **Ankündigungen gegen den Plan prüfen:** Kündigt ein Text spätere Inhalte an („am Donnerstag zeige ich …“, eine Wochen-Übersicht), fand der Faktenprüfer dreimal Widersprüche zum Plan (falsche Woche, mehr versprochen als geplant, Woche vergessen). Solche Ankündigungen erst nach der Plan-Freigabe schreiben, wortgenau gegen den Plan prüfen und den späteren Text an die Ankündigung binden. (exion-workspace, 16.11.2026)
 - **Sperre vor der Freigabe:** Offene Rückfragen oder Prüfmängel blockieren die Freigabe; nur auf ausdrückliches „trotzdem“ des Menschen.
 - **Quellen in Stufen:** `oeffentlich` (zitierbar) · `intern-erzaehlbar` (Erfahrung ja, Zahlen/Namen nein) · `intern` (nur Hintergrund). Freigegebene Kernfakten in einer Liste im Profil – die gelten als belegt.
 
 ## Testen
 
 - **Prüfer-Test mit absichtlich schlechtem Beispiel:** eingebaute Fehler notieren, Lösungsschlüssel **in eigener Datei**, die der Prüfer nicht lesen darf. Erwartung: alle Fehler gefunden, Gesamturteil „Mängel“.
-- **Neue Agents sind erst nach Neustart registriert.** Zum Testen in derselben Sitzung einen allgemeinen Agent die Rollendatei wörtlich befolgen lassen (Werkzeug-Beschränkung wird dabei nicht mitgetestet).
+- **Neue Agents:** Früher erst nach Neustart registriert; am 16.11.2026 waren neu angelegte Agents ohne Neustart verfügbar (Claude Code meldet sie). Erst nachsehen, ob sie in der Liste stehen; sonst neu starten oder zum Testen einen allgemeinen Agent die Rollendatei wörtlich befolgen lassen (Werkzeug-Beschränkung wird dabei nicht mitgetestet).
 - **Gesamtprüfung durch frischen Agent** (stärkstes Modell) mit Konzept, Plan und den Grenzfällen – hat beim ersten Mal 2 kritische Lücken gefunden.
 
 ## Betrieb
