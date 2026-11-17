@@ -1,6 +1,6 @@
 # Playbook: Arbeitsumgebung (JJs PC, Werkzeuge, Anleitungen für JJ)
 
-Stand: 09.11.2026 · Entstanden beim Aufräumen von `erkenntnisse.md` (Einträge 27.10.–06.11.2026 aus justluxx-ERP, exion-workspace, exion-wissen).
+Stand: 17.11.2026 · Entstanden beim Aufräumen von `erkenntnisse.md` (Einträge 27.10.–06.11.2026 aus justluxx-ERP, exion-workspace, exion-wissen).
 Gilt für alle Projekte auf JJs Windows-11-PC (PowerShell 5.1 + Git Bash).
 
 ## Werkzeuge auf dem PC
@@ -10,6 +10,8 @@ Gilt für alle Projekte auf JJs Windows-11-PC (PowerShell 5.1 + Git Bash).
 - **GitHub-CLI (`gh`):** seit 28.10. installiert und angemeldet (`exion-consulting`, HTTPS). Damit lassen sich Probeläufe (Actions) verfolgen. Pfad: `C:\Program Files\GitHub CLI\gh.exe`. (exion-wissen, 27.10./28.10.)
 - **Git-Identität** ist seit 27.10. global gesetzt (`Jadranko Jelavic`, `jj@exion.consulting`); vorher brach der erste Commit in neuen Repos ab. (exion-wissen, 27.10.)
 - **Umlaute in PowerShell 5.1:** Ohne Kodierung werden Umlaute falsch gelesen oder geschrieben („ü“ → „Ã¼“) → immer `-Encoding UTF8` beim Lesen, beim Schreiben UTF-8 ohne BOM: `[IO.File]::WriteAllText(..., New-Object Text.UTF8Encoding $false)`. (alle Projekte, 27.10.)
+- **Umlaute/Sonderzeichen in `.ps1`-Skripten:** PowerShell 5.1 liest Skriptdateien ohne BOM (unsichtbare Markierung am Dateianfang) als ANSI. Chinesische Dateinamen von Lieferanten kamen im Skript kaputt an („Datei nicht gefunden“) → Dateien über ein Muster suchen (`Get-ChildItem -Filter "240W*_01.jpg" -Recurse`) statt den Namen ins Skript zu schreiben. (justluxx-Datenblätter, 17.11.)
+- **PDF und Bilder ohne Zusatzprogramme:** Microsoft Edge gibt HTML ohne Fenster direkt als PDF aus: `msedge.exe --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="<ziel.pdf>" "file:///<seite.html>"` (per `Start-Process -Wait`, Pfad `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`). Scharfe PNGs, z. B. von SVG-Diagrammen: `--screenshot="<ziel.png>" --window-size=B,H --force-device-scale-factor=4`. Word (16.0) lässt sich per `New-Object -ComObject Word.Application` steuern – z. B. eine `.docx` zur Prüfung als PDF speichern (`ExportAsFixedFormat(<pdf>, 17)`) und die Seitenzahl lesen (`ComputeStatistics(2)`). (justluxx-Datenblätter, 17.11.)
 - **Port bleibt nach Server-Ende belegt:** Ein übrig gebliebener node-Prozess hielt Port 3100, Browser-Tests starteten nicht → `Get-NetTCPConnection -LocalPort 3100` (PowerShell) und nur diesen Prozess beenden. (justluxx-ERP, 30.10.)
 - **PowerShell + `ssh "…\"…\"…"`:** Verschachtelte Anführungszeichen kommen auf dem Server kaputt an („unexpected EOF“) → solche Befehle nicht als Einzeiler: erst `ssh benutzer@server`, dann den Befehl dort einfügen. (justluxx-ERP, 29.10.)
 - **API-Guthaben im Max-Abo:** Das Max-Abo enthält 100 $ API-Guthaben pro Monat, einmal über den Link in der Meldung in Claude Code aktivieren. Nutzen für Demos, Tests und Schulungsbeispiele (z. B. n8n mit Claude), nicht für den Echtbetrieb bei Kunden (dort eigenes API-Konto je Kunde oder klare Weiterberechnung). Bedingungen (Verfall, erlaubte Nutzung) vor dem Einlösen prüfen; keine personenbezogenen Daten ohne AVV mit Anthropic, für Demos nur Testdaten. (exion-workspace, 03.11.)
