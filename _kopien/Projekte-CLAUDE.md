@@ -7,6 +7,7 @@ Diese Datei wird in **jedem** Unterordner von `Projekte\` automatisch geladen. S
 - `exion-workspace\` – EXION selbst: Kontext (`context\`), Schulungen, Vorträge, Angebote, Folien-Generator
 - `exion-website\` – www.exion.consulting (Astro, Hetzner, n8n-Formulare) – erste Referenz für Kundenwebsites
 - `justluxx\justluxx-ERP\` – ERP für justluxx GmbH (Next.js, PostgreSQL) – Referenz für größere Softwareprojekte
+- `justluxx\Datenblätter\` – Produktdatenblätter für justluxx (PDF aus Datendatei, Design v2) – Referenz für Dokumente aus Daten
 - `_wissen\` – Wissensablage: bewährte Vorgehen aus allen Projekten (siehe unten)
 - Neue Kunden: `Projekte\<kunde>\<projekt>\` – je Projekt eigene `CLAUDE.md`, eigenes Git-Repo
 
@@ -23,6 +24,7 @@ Nicht alles auf einmal lesen, nur die Datei zum Thema der Aufgabe:
 | `_wissen\ki-agents-skills.md` | Skills und Agents für Claude Code bauen, prüfen, testen (z. B. Redaktion, Assistenten für Kunden) |
 | `_wissen\social-media-linkedin.md` | LinkedIn-Profil/Firmenseite einrichten, Titelbilder, Reichweite, Social-Media-Texte (EXION und Kunden) |
 | `_wissen\trading-backtest.md` | Trading-Strategien testen: Kriterien, Limits, Kosten, Vergleich, typische Rechenfehler |
+| `_wissen\dokumente-erzeugen.md` | Datenblätter, Kataloge, PDF/Word aus Daten erzeugen – Vorlagen, Satz, Prüfungen, Produktbilder, Herstellerunterlagen |
 | `_wissen\arbeitsumgebung.md` | Befehle, Werkzeuge und Eigenheiten auf JJs Windows-PC, Anleitungen für JJ, GitHub/Sicherung, Sitzungen |
 | `_wissen\erkenntnisse.md` | vor jedem neuen Projekt kurz überfliegen: Stolpersteine und Lösungen |
 
