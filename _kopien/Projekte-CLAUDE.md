@@ -24,7 +24,7 @@ Nicht alles auf einmal lesen, nur die Datei zum Thema der Aufgabe:
 | `_wissen\ki-agents-skills.md` | Skills und Agents für Claude Code bauen, prüfen, testen (z. B. Redaktion, Assistenten für Kunden) |
 | `_wissen\social-media-linkedin.md` | LinkedIn-Profil/Firmenseite einrichten, Titelbilder, Reichweite, Social-Media-Texte (EXION und Kunden) |
 | `_wissen\trading-backtest.md` | Trading-Strategien testen: Kriterien, Limits, Kosten, Vergleich, typische Rechenfehler |
-| `_wissen\dokumente-erzeugen.md` | Datenblätter, Kataloge, PDF/Word aus Daten erzeugen – Vorlagen, Satz, Prüfungen, Produktbilder, Herstellerunterlagen |
+| `_wissen\dokumente-erzeugen.md` | Datenblätter, Preislisten, Kataloge, PDF/Word/Web aus Daten erzeugen – Vorlagen, Satz, Seitenumbruch/Index, Prüfungen, Produktbilder, KI-Titelbild, Herstellerunterlagen |
 | `_wissen\arbeitsumgebung.md` | Befehle, Werkzeuge und Eigenheiten auf JJs Windows-PC, Anleitungen für JJ, GitHub/Sicherung, Sitzungen |
 | `_wissen\erkenntnisse.md` | vor jedem neuen Projekt kurz überfliegen: Stolpersteine und Lösungen |
 
