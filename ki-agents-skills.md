@@ -1,6 +1,6 @@
 # Playbook: Skills und Agents für Claude Code bauen
 
-Stand: 18.11.2026 (Sparring auch für Gestaltung, Liste „bewusst nicht umgesetzt“, Abschlussprüfung) · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
+Stand: 20.11.2026 (Prüfregel für fremde Skills; 18.11.: Sparring auch für Gestaltung, Liste „bewusst nicht umgesetzt“, Abschlussprüfung) · Erstes Beispiel: LinkedIn-Redaktion `/social-media` mit 4 Agents (`exion-workspace\.claude\skills\social-media\`, `.claude\agents\sm-*.md`, Konzept und Tests in `exion-workspace\social-media\docs\`).
 
 Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent** = Spezialist mit eigener Rollendatei für eine Teilaufgabe, ohne Gedächtnis zwischen zwei Aufträgen.
 
@@ -37,6 +37,18 @@ Begriffe: **Skill** = Ablaufanleitung, die in der Hauptsitzung läuft. **Agent**
 - **Prüfer-Test mit absichtlich schlechtem Beispiel:** eingebaute Fehler notieren, Lösungsschlüssel **in eigener Datei**, die der Prüfer nicht lesen darf. Erwartung: alle Fehler gefunden, Gesamturteil „Mängel“.
 - **Neue Agents:** Früher erst nach Neustart registriert; am 16.11.2026 waren neu angelegte Agents ohne Neustart verfügbar (Claude Code meldet sie). Erst nachsehen, ob sie in der Liste stehen; sonst neu starten oder zum Testen einen allgemeinen Agent die Rollendatei wörtlich befolgen lassen (Werkzeug-Beschränkung wird dabei nicht mitgetestet).
 - **Gesamtprüfung durch frischen Agent** (stärkstes Modell) mit Konzept, Plan und den Grenzfällen – hat beim ersten Mal 2 kritische Lücken gefunden.
+
+## Fremde Skills nutzen (z. B. skills.sh, find-skills)
+
+- **Keine fremden Skills ungeprüft installieren.** Ein Skill läuft mit denselben Rechten wie Claude: Er hat Zugriff auf Workspace, Kundenordner und `.env`. Ein bösartiger oder schlampiger Skill kann Daten nach außen schicken. Bei Kundendaten wäre das ein Datenschutzvorfall.
+- **Der Suchhelfer „find-skills“ (Vercel) wird nicht installiert.** Er sucht in skills.sh und installiert mit einem Befehl (`npx skills add …`). Sortiert wird nach Anzahl der Installationen, und beliebt heißt nicht sicher. Stattdessen sucht Claude auf Zuruf im Netz und zeigt die Treffer, ohne etwas zu installieren.
+- **Prüfregel vor jeder Installation, in drei Schritten:**
+  1. Die Prüfseite des Skills auf skills.sh ansehen. Dort prüfen Gen Agent Trust Hub, Socket und Snyk.
+  2. Den Skill komplett lesen, besonders mitgelieferte Skripte und **Hooks**. Hooks sind Befehle, die bei bestimmten Ereignissen von selbst starten. Kein Prüfdienst untersucht sie gezielt, und sie können nach dem Entfernen des Skills weiterlaufen.
+  3. JJ in einfachen Worten erklären, was der Skill tut. Erst nach seinem Ja wird installiert.
+- **Bekannte Quellen bevorzugen**, zum Beispiel Anthropic oder große Hersteller. Gute Ideen lieber in eigene Skills übernehmen.
+- **In Kundenprojekten keine fremden Skills einsetzen.**
+- Hintergrund: Snyk („ToxicSkills“, Februar 2026) hat rund 4.000 Skills von skills.sh und ClawHub geprüft. 76 waren nachweislich bösartig, 13 % hatten mindestens ein schweres Problem. Die Zahlen stammen von einem Anbieter von Prüfsoftware. Stand der Angaben geprüft am 20.11.2026. (exion-workspace, 20.11.2026)
 
 ## Betrieb
 
